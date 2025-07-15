@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --panel-bg: rgba(24, 24, 27, 0.9);
+  --panel-border: rgb(63, 63, 70);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #111111;
+  color: #e4e4e7;
+  font-family: 'Inter', system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+.gradient-title {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.panel {
+  background-color: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(8px);
+}
+
+.code-font {
+  font-family: 'Fira Code', monospace;
+}
+
+.feature-block {
+  border-color: transparent;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  padding: 1.5rem;
+  position: relative;
+  background: #111 padding-box;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-block:before {
+  background: linear-gradient(160deg, hsla(0,0%,100%,.36) 5%, hsla(0,0%,100%,.08) 25%, hsla(0,0%,100%,.24) 50%, hsla(0,0%,100%,.08) 75%, hsla(0,0%,100%,.28) 95%);
+  border-radius: inherit;
+  content: "";
+  position: absolute;
+  inset: -1px;
+  opacity: 0.5;
+  z-index: -1;
+  transition: opacity 0.2s;
+}
+
+.feature-block:hover:before {
+  opacity: 0.8;
+}
+
+.feature-block:hover {
+  transform: translateY(-2px);
+}
+
+.installation-section {
+  column-gap: 2.5rem;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 56rem;
+  row-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .installation-section {
+    border-color: rgba(255, 255, 255, 0.1);
+    border-top-width: 1px;
+    grid-template-columns: 200px 1fr;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+  }
+}
