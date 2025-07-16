@@ -37,14 +37,14 @@ export function Hero() {
             className="relative z-10"
           >
             <h1 className="mb-6 text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-              <span className="gradient-title">Claude Code</span>
+              <span className="gradient-title">Add AI Employees</span>
               <br />
               <span>on your Slack</span>
             </h1>
             
             <p className="mb-8 max-w-xl text-lg text-zinc-400 lg:text-xl">
-              Access best agentic coding assistant in your favorite messaging app. <br/> 
-              Develop, debug, and deploy with ease using AI peers
+              Claude Code, best agentic coding assistant in your favorite messaging app. <br/> 
+              Build your own AI peers to help you with your everyday startup tasks.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
