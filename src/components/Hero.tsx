@@ -37,7 +37,7 @@ export function Hero() {
             className="relative z-10"
           >
             <h1 className="mb-6 text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-              <span className="gradient-title">Add AI Employees</span>
+              <span className="gradient-title">Build AI peers</span>
               <br />
               <span>on your Slack</span>
             </h1>
