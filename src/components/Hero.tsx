@@ -39,7 +39,9 @@ export function Hero() {
             <h1 className="mb-6 text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
               <span className="gradient-title">Build AI peers</span>
               <br />
-              <span>on your Slack</span>
+              <span className="text-zinc-400 text-md">to work with you</span>
+              <br />
+              <span>in Slack</span>
             </h1>
             
             <p className="mb-8 max-w-xl text-lg text-zinc-400 lg:text-xl">
