@@ -66,9 +66,9 @@ export function Installation() {
             <div className="text-sm text-zinc-400 md:pt-0.5 md:text-base">
               <p className="mb-3">Install via npm:</p>
               <div className="flex items-center gap-4">
-                <code className="text-zinc-100">npm install -g peerbot</code>
-                <CopyButton text="npm install -g peerbot" />
-              </div>
+                <code className="text-zinc-100">npx peerbot-ai@latest run slack                 </code>
+                <CopyButton text="npx peerbot-ai@latest run slack" />
+              </div>  
             </div>
           </motion.div>
 
@@ -87,10 +87,10 @@ export function Installation() {
               GitHub Actions
             </h3>
             <div className="text-sm text-zinc-400 md:pt-0.5 md:text-base">
-              <p className="mb-3">Use in CI/CD workflows:</p>
+              <p className="mb-3">Use in CI/CD workflows yml, add this line and your Slack bot will be ready to use:</p>
               <div className="flex items-center gap-4">
-                <code className="text-zinc-100">npm install -g peerbot</code>
-                <CopyButton text="npm install -g peerbot" />
+                <code className="text-zinc-100">npx peerbot-ai@latest run slack</code>
+                <CopyButton text="npx peerbot-ai@latest run slack" />
               </div>
             </div>
           </motion.div>

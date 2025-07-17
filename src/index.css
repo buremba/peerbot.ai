@@ -93,3 +93,36 @@ body {
     padding-top: 1.5rem;
   }
 }
+
+.terminal-window {
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.3),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.terminal-window::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    135deg,
+    #3b82f6 0%,
+    #8b5cf6 25%,
+    #ec4899 50%,
+    #8b5cf6 75%,
+    #3b82f6 100%
+  );
+  border-radius: 0.5rem;
+  opacity: 0.15;
+  z-index: -1;
+  animation: gradient-rotate 4s linear infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradient-rotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

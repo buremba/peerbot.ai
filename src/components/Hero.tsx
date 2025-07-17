@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { MessageSquare } from 'lucide-react'
+import { Terminal } from './Terminal'
 
 // Slack Logo SVG Component
 function SlackIcon({ className }: { className?: string }) {
@@ -18,18 +19,13 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden px-8 py-12">
       <div className="mx-auto max-w-7xl">
-        <div className="relative">
+        <div className="relative grid lg:grid-cols-2 gap-8 items-center">
           {/* Background - exact structure from sshx.io */}
           <div className="absolute -z-10 scale-150 md:left-[180px] md:top-[-200px] md:w-[1000px] md:scale-100">
             <img className="select-none" src="/landing-background.svg" alt="" />
           </div>
           
-          {/* Main graphic positioned like sshx.io */}
-          <div className="md:absolute md:left-[500px] md:w-[1000px]">
-            <img className="mt-5 mb-8 w-[720px]" width="813" height="623" src="/landing-graphic.svg" alt="two terminal windows running peerbot and three live cursors" />
-          </div>
-          
-          {/* Text content - positioned like sshx.io */}
+          {/* Text content - left side */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,14 +35,15 @@ export function Hero() {
             <h1 className="mb-6 text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
               <span className="gradient-title">Build AI peers</span>
               <br />
-              <span className="text-zinc-400 text-md">to work with you</span>
+              <span className="text-zinc-400 text-md">to work for you</span>
               <br />
-              <span>in Slack</span>
+              <span>on Slack</span>
             </h1>
             
             <p className="mb-8 max-w-xl text-lg text-zinc-400 lg:text-xl">
               Claude Code, best agentic coding assistant in your favorite messaging app. <br/> 
-              Build your own AI peers to help you with your everyday startup tasks.
+              Build your own AI peers to help you with your everyday tasks. <br />
+              The bot has access to your local environment and can run commands on your behalf.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -57,7 +54,7 @@ export function Hero() {
                 className="inline-flex items-center gap-2 rounded-full bg-pink-700 px-8 py-2 text-lg font-medium text-white transition-all hover:bg-pink-600 active:ring-4 active:ring-pink-500/50"
               >
                 <SlackIcon className="h-5 w-5" />
-                Add to Slack
+                Join our Slack to experience
               </a>
               <a
                 href="https://join.slack.com/t/peerbot/shared_invite/zt-391o8tyw2-iyupjTG1xHIz9Og8C7JOnw"
@@ -66,10 +63,15 @@ export function Hero() {
                 className="inline-flex items-center gap-2 rounded-full border border-zinc-600 bg-zinc-800/50 px-8 py-2 text-lg font-medium text-white transition-all hover:bg-zinc-700/50 hover:border-zinc-500"
               >
                 <MessageSquare className="h-5 w-5" />
-                Join Slack
+                Add to your Slack
               </a>
             </div>
           </motion.div>
+          
+          {/* Terminal on the right */}
+          <div className="relative lg:pl-8">
+            <Terminal />
+          </div>
         </div>
       </div>
     </section>
