@@ -15,7 +15,7 @@ export function Video() {
             See it in action
           </h2>
           <p className="mb-16 text-xl text-zinc-400">
-            Watch how sshx makes terminal sharing effortless
+            Watch how PeerBot helps boosting your productivity
           </p>
         </motion.div>
 
