@@ -87,10 +87,46 @@ export function Installation() {
               GitHub Actions
             </h3>
             <div className="text-sm text-zinc-400 md:pt-0.5 md:text-base">
-              <p className="mb-3">Use in CI/CD workflows yml, add this line and your Slack bot will be ready to use:</p>
-              <div className="flex items-center gap-4">
-                <code className="text-zinc-100">npx peerbot-ai@latest run slack</code>
-                <CopyButton text="npx peerbot-ai@latest run slack" />
+              <p className="mb-3">Use in CI/CD workflows. Add this to your <code>.github/workflows/peerbot.yml</code>:</p>
+              <div className="relative">
+                <pre className="rounded-lg bg-zinc-900 p-4 text-xs text-zinc-300 overflow-x-auto">
+                  <code>{`name: PeerBot CI
+on: [push, pull_request]
+
+jobs:
+  peerbot:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    - name: Run PeerBot
+      run: npx peerbot-ai@latest run slack --peers devops
+      env:
+        SLACK_BOT_TOKEN: \${{ secrets.SLACK_BOT_TOKEN }}
+        SLACK_APP_TOKEN: \${{ secrets.SLACK_APP_TOKEN }}`}</code>
+                </pre>
+                <div className="absolute right-2 top-2">
+                  <CopyButton text={`name: PeerBot CI
+on: [push, pull_request]
+
+jobs:
+  peerbot:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    - name: Run PeerBot
+      run: npx peerbot-ai@latest run slack --peers devops
+      env:
+        SLACK_BOT_TOKEN: \${{ secrets.SLACK_BOT_TOKEN }}
+        SLACK_APP_TOKEN: \${{ secrets.SLACK_APP_TOKEN }}`} />
+                </div>
               </div>
             </div>
           </motion.div>

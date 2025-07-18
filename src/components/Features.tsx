@@ -5,32 +5,32 @@ const features = [
   {
     icon: <Zap className="h-6 w-6" />,
     title: 'Best Agentic Coding Assistant',
-    description: 'PeerBot is build on Claude Code, the best agentic coding assistant.',
+    description: 'PeerBot is build on Claude Code, the best agentic coding assistant. It can be whoever you want it to be.',
   },
   {
     icon: <Shield className="h-6 w-6" />,
-    title: 'Help Colleagues',
-    description: 'Help your colleagues by sharing your terminal with them',
+    title: 'Help your colleagues',
+    description: 'Your colleagues can ask the bot questions instead of you, and once the bot has your confirmation, it can get things done for you. You can need to review & approve.',
   },
   {
     icon: <Users className="h-6 w-6" />,
-    title: 'Multi-Peer Support',
-    description: 'You can define multiple peers which are auto-selected based on the context of the message. ',
+    title: 'Pick best model for the task',
+    description: 'You can define multiple peers (has its own role and 💰 model) which are auto-selected based on the context of the message.',
   },
   {
     icon: <Lock className="h-6 w-6" />,
-    title: 'Secure by Default',
-    description: 'Peerbot uses Slack Bolt SDK in socket mode, no data is sent outside of Slack',
+    title: 'Secure by Design',
+    description: 'It uses Slack Bolt SDK in socket mode, the messages are encrypted end to end with your Slack and your environment.',
   },
   {
     icon: <Globe className="h-6 w-6" />,
-    title: 'Works Anywhere',
-    description: 'Access Claude Code runing on your machine or your Slack',
+    title: 'Best for multi-tasking',
+    description: 'You can access your peers from anywhere including desktop, mobile, and web thanks to Slack.',
   },
   {
     icon: <Code className="h-6 w-6" />,
-    title: 'CLI',
-    description: 'Just install the CLI and run it on your machine, CI, or on cloud providers',
+    title: 'Works everywhere',
+    description: 'Just install the CLI and run it on your machine, CI, or on cloud providers such as AWS, GCP, and Azure.',
   },
 ]
 
@@ -46,10 +46,10 @@ export function Features() {
           className="text-center"
         >
           <h2 className="mb-4 text-4xl font-bold text-zinc-100">
-            Built for developers, by developers
+              Built for developers, by developers
           </h2>
           <p className="mb-16 text-xl text-zinc-400">
-            Everything you need for secure terminal sharing
+          PeerBot brings the power of Claude Code to your Slack workspace.
           </p>
         </motion.div>
 

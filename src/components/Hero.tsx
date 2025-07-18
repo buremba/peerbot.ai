@@ -45,8 +45,8 @@ export function Hero() {
                 <span className=" text-pink-400">Claude Code</span>, best agentic coding assistant in your messaging app. 
 
               </p>
-              <p className=" text-zinc-400 lg:text-md">
-              Build your own <span className="text-cyan-400 font-medium">AI peers</span> to help you with your everyday tasks using your <span className="text-green-400 font-medium">local environment</span>.
+              <p className=" text-zinc-400 text-md">
+              PeerBot helps you with your everyday tasks using your <span className="text-green-400 font-medium">local environment</span>.
               </p>
              
             </div>

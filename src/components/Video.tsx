@@ -12,10 +12,10 @@ export function Video() {
           className="text-center"
         >
           <h2 className="mb-4 text-4xl font-bold text-zinc-100">
-            See it in action
+          Scale yourself 10x
           </h2>
           <p className="mb-16 text-xl text-zinc-400">
-            Watch how PeerBot helps boosting your productivity <br /> accessing your parallel agents in Slack
+          Think of AI peers as your own team members, reporting to you directly.
           </p>
         </motion.div>
 
