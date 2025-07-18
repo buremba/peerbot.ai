@@ -100,6 +100,8 @@ body {
     0 10px 10px -5px rgba(0, 0, 0, 0.04),
     0 0 0 1px rgba(255, 255, 255, 0.05);
   position: relative;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .terminal-window::before {
@@ -125,4 +127,33 @@ body {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* Responsive terminal styles */
+@media (max-width: 640px) {
+  .terminal-window {
+    font-size: 0.75rem;
+  }
+  
+  .terminal-window pre {
+    font-size: 0.625rem;
+  }
+  
+  .terminal-window .text-xs {
+    font-size: 0.625rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .terminal-window {
+    font-size: 0.625rem;
+  }
+  
+  .terminal-window pre {
+    font-size: 0.5rem;
+  }
+  
+  .terminal-window .text-xs {
+    font-size: 0.5rem;
+  }
 }

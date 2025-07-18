@@ -50,28 +50,30 @@ export function Hero() {
 
             <div className="flex flex-col gap-4 sm:flex-row">
               <a
-                href="https://slack.com/oauth/v2/authorize?client_id=9171119466245.9176167386695&scope=app_mentions:read,channels:history,chat:write,chat:write.public,im:history,im:read,im:write,users:read,reactions:read,reactions:write,channels:read,groups:read&user_scope="
+                              href="https://join.slack.com/t/peerbot/shared_invite/zt-391o8tyw2-iyupjTG1xHIz9Og8C7JOnw"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-pink-700 px-8 py-2 text-lg font-medium text-white transition-all hover:bg-pink-600 active:ring-4 active:ring-pink-500/50"
               >
-                <SlackIcon className="h-5 w-5" />
+                                <MessageSquare className="h-5 w-5" />
+
                 Try it now
               </a>
               <a
-                href="https://join.slack.com/t/peerbot/shared_invite/zt-391o8tyw2-iyupjTG1xHIz9Og8C7JOnw"
+                              href="https://slack.com/oauth/v2/authorize?client_id=9171119466245.9176167386695&scope=app_mentions:read,channels:history,chat:write,chat:write.public,im:history,im:read,im:write,users:read,reactions:read,reactions:write,channels:read,groups:read&user_scope="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-zinc-600 bg-zinc-800/50 px-8 py-2 text-lg font-medium text-white transition-all hover:bg-zinc-700/50 hover:border-zinc-500"
               >
-                <MessageSquare className="h-5 w-5" />
+                                <SlackIcon className="h-5 w-5" />
+ 
                 Add to your Slack
               </a>
             </div>
           </motion.div>
           
           {/* Terminal on the right */}
-          <div className="relative lg:pl-8">
+          <div className="relative lg:pl-8 w-full max-w-full overflow-hidden">
             <Terminal />
           </div>
         </div>

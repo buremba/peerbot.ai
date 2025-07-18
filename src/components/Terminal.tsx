@@ -10,17 +10,17 @@ export function Terminal() {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 0.3 }}
-      className="terminal-window rounded-lg overflow-hidden shadow-2xl"
+      className="terminal-window rounded-lg overflow-hidden shadow-2xl w-full max-w-full"
     >
-      <div className="bg-zinc-900 border border-zinc-800">
+      <div className="bg-zinc-900 border border-zinc-800 w-full">
         <div className="flex items-center justify-between px-4 pt-2 bg-zinc-800/50 border-b border-zinc-800">
           <div className="flex items-center gap-2">
             <div className="h-3 w-3 rounded-full bg-red-500" />
             <div className="h-3 w-3 rounded-full bg-yellow-500" />
             <div className="h-3 w-3 rounded-full bg-green-500" />
           </div>
-          <div className="flex-1 ml-4">
-            <div className="flex items-center gap-1">
+          <div className="flex-1 ml-4 overflow-x-auto">
+            <div className="flex items-center gap-1 min-w-0">
               <button
                 onClick={() => setActiveTab('terminal')}
                 className={`px-3 py-2 text-sm rounded-t-md transition-all cursor-pointer ${
@@ -53,7 +53,7 @@ export function Terminal() {
           </div>
         </div>
         
-        <div className="p-4 font-mono text-xs h-[400px] overflow-hidden">
+        <div className="p-4 font-mono text-xs h-[400px] overflow-auto max-[570px]:p-2 max-[570px]:text-[10px]">
           {activeTab === 'terminal' ? (
             <>
               <div className="flex items-center gap-2 text-green-400">
@@ -80,14 +80,16 @@ export function Terminal() {
                 <div>Peers: <span className="text-green-400">4</span></div>
                 
                 <div className="mt-2 text-zinc-300">Available Peers:</div>
-                <pre className="text-xs whitespace-pre overflow-x-auto">
+                <div className="overflow-x-auto">
+                <pre className="text-xs whitespace-pre">
                   <span className="text-zinc-500">  Name        User             Role                          Exec  MCPs</span>
                   <span className="text-zinc-500">{'\n'}  ────────────────────────────────────────────────────────────────────</span>
                   <span>{'\n'}  </span><span className="text-zinc-300 hover:text-cyan-400 cursor-pointer hover:underline" onClick={() => setActiveTab('buremba')}>buremba</span><span>     </span><span className="text-cyan-400">@buremba-ai</span><span>      ceo                           </span><span className="text-green-400">✓</span><span>     ∅</span>
                   <span>{'\n'}  </span><span className="text-zinc-300 hover:text-cyan-400 cursor-pointer hover:underline" onClick={() => setActiveTab('devops')}>devops</span><span>      </span><span className="text-cyan-400">@k8s</span><span>             devops agent in dev...        </span><span className="text-green-400">✓</span><span>     ∅</span>
-                  <span>{'\n'}  </span><span className="text-zinc-300 hover:text-cyan-400 cursor-pointer hover:underline" onClick={() => setActiveTab('frontend')}>frontend</span><span>    </span><span className="text-cyan-400">@soham-peerbot</span><span>   best founding engineer...     </span><span className="text-green-400">✓</span><span>     ∅</span>
+                  <span>{'\n'}  </span><span className="text-zinc-300 hover:text-cyan-400 cursor-pointer hover:underline" onClick={() => setActiveTab('frontend')}>engineer</span><span>    </span><span className="text-cyan-400">@soham</span><span>           best founding engineer...     </span><span className="text-green-400">✓</span><span>     ∅</span>
                   <span>{'\n'}  </span><span className="text-zinc-300 hover:text-cyan-400 cursor-pointer hover:underline" onClick={() => setActiveTab('marketing')}>marketing</span><span>   </span><span className="text-cyan-400">@lorena</span><span>          growth hacker...              </span><span className="text-red-400">✗</span><span>     ∅</span>
                 </pre>
+                </div>
                 
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -95,8 +97,8 @@ export function Terminal() {
                   transition={{ duration: 0.5, delay: 1.5 }}
                   className="mt-3"
                 >
-                  <div className="text-blue-400">[INFO] Connected to Slack, sessions will be powered by Claude Code</div>
-                  <div className="text-zinc-400">[INFO] 🔄 Peers will be selected dynamically per conversation</div>
+                  <div className="text-blue-400">🗣️ Connected to Slack, will start Claude Code when you mention @buremba-peer</div>
+                  <div className="text-zinc-400">🔄 Peers will be selected dynamically per conversation</div>
                   <div className="mt-1 flex items-center gap-1">
                     <motion.span
                       animate={{ opacity: [1, 0] }}
@@ -149,7 +151,7 @@ export function Terminal() {
               transition={{ duration: 0.3 }}
               className="text-zinc-300"
             >
-              <pre className="text-sm text-zinc-300 whitespace-pre-wrap">{`---
+              <pre className="text-sm text-zinc-300 whitespace-pre-wrap max-[570px]:text-xs">{`---
 user: "@buremba-ai"
 editor: cursor
 allow_execution: true
@@ -183,7 +185,7 @@ Docker, CI/CD pipelines, and cloud infrastructure.`}</pre>
               transition={{ duration: 0.3 }}
               className="text-zinc-300"
             >
-              <pre className="text-sm text-zinc-300 whitespace-pre-wrap">{`---
+              <pre className="text-sm text-zinc-300 whitespace-pre-wrap max-[570px]:text-xs">{`---
 user: "@soham-peerbot"
 editor: cursor
 allow_execution: true
@@ -200,7 +202,7 @@ You're a smart guy who gets the job done in the best possible way given timeline
               transition={{ duration: 0.3 }}
               className="text-zinc-300"
             >
-              <pre className="text-sm text-zinc-300 whitespace-pre-wrap">{`---
+              <pre className="text-sm text-zinc-300 whitespace-pre-wrap max-[570px]:text-xs">{`---
 user: "@lorena"
 editor: vscode
 allow_execution: false

@@ -37,35 +37,21 @@ export function Video() {
                 </div>
                 <div className="flex-1 px-8">
                   <div className="mx-auto max-w-md rounded-md bg-zinc-900 px-3 py-1 text-center text-sm text-zinc-400">
-                    peerbot.ai
+                    peerbot.slack.com
                   </div>
                 </div>
                 <div className="w-20" />
               </div>
               
-              {/* Video content */}
+              {/* Screenshot content */}
               <div className="relative aspect-video">
-                <video
-                  playsInline
-                  muted
-                  autoPlay
-                  loop
-                  controls
-                  className="h-full w-full"
+                <img
+                  src="/images/screenshot.png"
+                  alt="PeerBot demo"
+                  className="h-full w-full object-cover"
                   width="2476"
                   height="1534"
-                >
-                  <source 
-                    src="https://sshx.s3.amazonaws.com/media/teaser-video.mp4" 
-                    type='video/mp4; codecs="hvc1"'
-                  />
-                  <source 
-                    src="https://sshx.s3.amazonaws.com/media/teaser-video.webm" 
-                    type="video/webm"
-                  />
-                  <track kind="captions" />
-                  Your browser does not support the video tag.
-                </video>
+                />
               </div>
             </div>
           </div>
