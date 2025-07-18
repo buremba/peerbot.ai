@@ -40,11 +40,16 @@ export function Hero() {
               <span>on Slack</span>
             </h1>
             
-            <p className="mb-8 max-w-xl text-lg text-zinc-400 lg:text-xl">
-              Claude Code, best agentic coding assistant in your favorite messaging app. <br/> 
-              Build your own AI peers to help you with your everyday tasks. <br />
-              The bot has access to your local environment and can run commands on your behalf.
-            </p>
+            <div className="mb-8 max-w-xl space-y-3">
+              <p className=" text-zinc-300 lg:text-lg">
+                <span className=" text-pink-400">Claude Code</span>, best agentic coding assistant in your messaging app. 
+
+              </p>
+              <p className=" text-zinc-400 lg:text-md">
+              Build your own <span className="text-cyan-400 font-medium">AI peers</span> to help you with your everyday tasks using your <span className="text-green-400 font-medium">local environment</span>.
+              </p>
+             
+            </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
               <a

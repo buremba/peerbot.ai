@@ -9,28 +9,28 @@ const features = [
   },
   {
     icon: <Shield className="h-6 w-6" />,
-    title: 'No data is stored',
-    description: 'PeerBot runs as Slack app, so no data is stored on servers.',
+    title: 'Help Colleagues',
+    description: 'Help your colleagues by sharing your terminal with them',
   },
   {
     icon: <Users className="h-6 w-6" />,
-    title: 'Multi-User Support',
-    description: 'You can define multiple peers which are auto-selected based on the context of the message.',
+    title: 'Multi-Peer Support',
+    description: 'You can define multiple peers which are auto-selected based on the context of the message. ',
   },
   {
     icon: <Lock className="h-6 w-6" />,
     title: 'Secure by Default',
-    description: 'Only you can access the PeerBot app on your Slack.',
+    description: 'Peerbot uses Slack Bolt SDK in socket mode, no data is sent outside of Slack',
   },
   {
     icon: <Globe className="h-6 w-6" />,
     title: 'Works Anywhere',
-    description: 'Access Claude Code runing on your machineon your Slack',
+    description: 'Access Claude Code runing on your machine or your Slack',
   },
   {
     icon: <Code className="h-6 w-6" />,
-    title: 'Open Source',
-    description: 'Fully open source and available on GitHub for transparency.',
+    title: 'CLI',
+    description: 'Just install the CLI and run it on your machine, CI, or on cloud providers',
   },
 ]
 
