@@ -15,7 +15,7 @@ export function Video() {
           Scale yourself 10x
           </h2>
           <p className="mb-16 text-xl text-zinc-400">
-          Think of AI peers as your own team members, reporting to you directly.
+          Watch how we develop PeerBot <span className="text-pink-400 font-bold">with PeerBot</span> in a Slack workspace, join our Slack to experience.
           </p>
         </motion.div>
 

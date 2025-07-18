@@ -10,14 +10,20 @@ export function Header() {
             <span className="gradient-title">PeerBot</span>
           </Link>
           
-          <a
-            href="https://github.com/buremba/peerbot"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-zinc-400 transition-colors hover:text-zinc-100"
-          >
-            <Github className="h-6 w-6" />
-          </a>
+          <div className="flex items-center gap-4">
+            <span className="inline-block rounded-full bg-pink-500/20 px-3 py-1 text-sm font-medium text-pink-400 border border-pink-500/30">
+              Alpha
+            </span>
+            <a
+              href="https://github.com/buremba/peerbot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-400 transition-colors hover:text-zinc-100 cursor-pointer" 
+            >
+              <Github className="h-6 w-6" />
+            </a>
+          </div>
+          
         </div>
       </div>
     </header>

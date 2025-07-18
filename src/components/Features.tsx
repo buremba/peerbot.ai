@@ -4,33 +4,33 @@ import { motion } from 'framer-motion'
 const features = [
   {
     icon: <Zap className="h-6 w-6" />,
-    title: 'Best Agentic Coding Assistant',
-    description: 'PeerBot is build on Claude Code, the best agentic coding assistant. It can be whoever you want it to be.',
+    title: 'Smart GIT worktrees',
+    description: 'When making code changes, PeerBot automatically creates worktrees and pushes them to create Pull Requests—all from Slack.',
   },
   {
     icon: <Shield className="h-6 w-6" />,
-    title: 'Help your colleagues',
-    description: 'Your colleagues can ask the bot questions instead of you, and once the bot has your confirmation, it can get things done for you. You can need to review & approve.',
+    title: 'Team collaboration made easy',
+    description: 'Your colleagues can ask questions directly to the bot instead of interrupting you. You review and approve before any action is taken.',
   },
   {
     icon: <Users className="h-6 w-6" />,
-    title: 'Pick best model for the task',
-    description: 'You can define multiple peers (has its own role and 💰 model) which are auto-selected based on the context of the message.',
+    title: 'Smart model selection',
+    description: 'Define multiple peers, each with their own role and model. The right peer is automatically selected based on conversation context.',
   },
   {
     icon: <Lock className="h-6 w-6" />,
-    title: 'Secure by Design',
-    description: 'It uses Slack Bolt SDK in socket mode, the messages are encrypted end to end with your Slack and your environment.',
+    title: 'Secure by design',
+    description: 'Uses Slack Bolt SDK in socket mode with end-to-end encryption between your Slack workspace and local environment.',
   },
   {
     icon: <Globe className="h-6 w-6" />,
-    title: 'Best for multi-tasking',
-    description: 'You can access your peers from anywhere including desktop, mobile, and web thanks to Slack.',
+    title: 'Access from anywhere',
+    description: 'Work with your AI peers from desktop, mobile, or web—wherever Slack is available.',
   },
   {
     icon: <Code className="h-6 w-6" />,
-    title: 'Works everywhere',
-    description: 'Just install the CLI and run it on your machine, CI, or on cloud providers such as AWS, GCP, and Azure.',
+    title: 'Deploy anywhere',
+    description: 'Simple CLI installation works on your local machine, CI/CD pipelines, or cloud providers like AWS, GCP, and Azure.',
   },
 ]
 
@@ -46,10 +46,10 @@ export function Features() {
           className="text-center"
         >
           <h2 className="mb-4 text-4xl font-bold text-zinc-100">
-              Built for developers, by developers
+            Built for developers, by developers
           </h2>
           <p className="mb-16 text-xl text-zinc-400">
-          PeerBot brings the power of Claude Code to your Slack workspace.
+            PeerBot brings the power of Claude Code to your Slack workspace.
           </p>
         </motion.div>
 

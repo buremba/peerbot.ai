@@ -40,11 +40,16 @@ export function Installation() {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-4xl font-bold text-zinc-100">
-            Installation
-          </h2>
+          <div className="mb-4 flex items-center justify-center gap-3">
+            <h2 className="text-4xl font-bold text-zinc-100">
+              Installation
+            </h2>
+            <span className="inline-block rounded-full bg-pink-500/20 px-3 py-1 text-sm font-medium text-pink-400 border border-pink-500/30">
+              Alpha
+            </span>
+          </div>
           <p className="text-xl text-zinc-400">
-            Get started with peerbot in seconds
+            Get started with PeerBot in seconds
           </p>
         </motion.div>
 
@@ -64,7 +69,7 @@ export function Installation() {
               npm
             </h3>
             <div className="text-sm text-zinc-400 md:pt-0.5 md:text-base">
-              <p className="mb-3">Install via npm:</p>
+              <p className="mb-3">Quick start with npm:</p>
               <div className="flex items-center gap-4">
                 <code className="text-zinc-100">npx peerbot-ai@latest run slack                 </code>
                 <CopyButton text="npx peerbot-ai@latest run slack" />
@@ -72,13 +77,48 @@ export function Installation() {
             </div>
           </motion.div>
 
-    
+          {/* Docker */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="installation-section"
+          >
+            <h3 className="text-lg sm:text-xl">
+              <Download className="mb-0.5 mr-1 inline-block h-5 w-5 text-zinc-400" />
+              Docker
+            </h3>
+            <div className="text-sm text-zinc-400 md:pt-0.5 md:text-base">
+              <p className="mb-3">Deploy with Docker:</p>
+              <div className="relative">
+                <pre className="rounded-lg bg-zinc-900 p-4 text-xs text-zinc-300 overflow-x-auto">
+                  <code>{`docker run -d \\
+  --name peerbot \\
+  -e SLACK_BOT_TOKEN=\${SLACK_BOT_TOKEN} \\
+  -e SLACK_APP_TOKEN=\${SLACK_APP_TOKEN} \\
+  -e SLACK_SIGNING_SECRET=\${SLACK_SIGNING_SECRET} \\
+  -v \${PWD}/.peerbot:/app/.peerbot \\
+  peerbot/peerbot-ai:latest run slack`}</code>
+                </pre>
+                <div className="absolute right-2 top-2">
+                  <CopyButton text={`docker run -d \\
+  --name peerbot \\
+  -e SLACK_BOT_TOKEN=\${SLACK_BOT_TOKEN} \\
+  -e SLACK_APP_TOKEN=\${SLACK_APP_TOKEN} \\
+  -e SLACK_SIGNING_SECRET=\${SLACK_SIGNING_SECRET} \\
+  -v \${PWD}/.peerbot:/app/.peerbot \\
+  peerbot/peerbot-ai:latest run slack`} />
+                </div>
+              </div>
+            </div>
+          </motion.div>
 
           {/* GitHub Actions */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
             className="installation-section"
           >
@@ -87,7 +127,7 @@ export function Installation() {
               GitHub Actions
             </h3>
             <div className="text-sm text-zinc-400 md:pt-0.5 md:text-base">
-              <p className="mb-3">Use in CI/CD workflows. Add this to your <code>.github/workflows/peerbot.yml</code>:</p>
+              <p className="mb-3">Integrate with CI/CD. Add this to your <code>.github/workflows/peerbot.yml</code>:</p>
               <div className="relative">
                 <pre className="rounded-lg bg-zinc-900 p-4 text-xs text-zinc-300 overflow-x-auto">
                   <code>{`name: PeerBot CI
@@ -106,6 +146,7 @@ jobs:
       run: npx peerbot-ai@latest run slack --peers devops
       env:
         SLACK_BOT_TOKEN: \${{ secrets.SLACK_BOT_TOKEN }}
+        SLACK_SIGNING_SECRET: \${{ secrets.SLACK_SIGNING_SECRET }}
         SLACK_APP_TOKEN: \${{ secrets.SLACK_APP_TOKEN }}`}</code>
                 </pre>
                 <div className="absolute right-2 top-2">
@@ -125,6 +166,7 @@ jobs:
       run: npx peerbot-ai@latest run slack --peers devops
       env:
         SLACK_BOT_TOKEN: \${{ secrets.SLACK_BOT_TOKEN }}
+        SLACK_SIGNING_SECRET: \${{ secrets.SLACK_SIGNING_SECRET }}
         SLACK_APP_TOKEN: \${{ secrets.SLACK_APP_TOKEN }}`} />
                 </div>
               </div>

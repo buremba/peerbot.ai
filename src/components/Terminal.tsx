@@ -84,9 +84,9 @@ export function Terminal() {
                   <span className="text-zinc-500">  Name        User             Role                          Exec  MCPs</span>
                   <span className="text-zinc-500">{'\n'}  ────────────────────────────────────────────────────────────────────</span>
                   <span>{'\n'}  </span><span className="text-zinc-300 hover:text-cyan-400 cursor-pointer hover:underline" onClick={() => setActiveTab('buremba')}>buremba</span><span>     </span><span className="text-cyan-400">@buremba-ai</span><span>      ceo                           </span><span className="text-green-400">✓</span><span>     ∅</span>
-                  <span>{'\n'}  </span><span className="text-zinc-300 hover:text-cyan-400 cursor-pointer hover:underline" onClick={() => setActiveTab('devops')}>devops</span><span>      </span><span className="text-cyan-400">@k8s</span><span>             devops engineer spec...       </span><span className="text-green-400">✓</span><span>     ∅</span>
-                  <span>{'\n'}  </span><span className="text-zinc-300 hover:text-cyan-400 cursor-pointer hover:underline" onClick={() => setActiveTab('frontend')}>frontend</span><span>    </span><span className="text-cyan-400">@slack-peer-bot</span><span>  senior frontend eng...        </span><span className="text-green-400">✓</span><span>     ∅</span>
-                  <span>{'\n'}  </span><span className="text-zinc-300 hover:text-cyan-400 cursor-pointer hover:underline" onClick={() => setActiveTab('marketing')}>marketing</span><span>   </span><span className="text-cyan-400">@lorena</span><span>          technical marketing...        </span><span className="text-red-400">✗</span><span>     ∅</span>
+                  <span>{'\n'}  </span><span className="text-zinc-300 hover:text-cyan-400 cursor-pointer hover:underline" onClick={() => setActiveTab('devops')}>devops</span><span>      </span><span className="text-cyan-400">@k8s</span><span>             devops agent in dev...        </span><span className="text-green-400">✓</span><span>     ∅</span>
+                  <span>{'\n'}  </span><span className="text-zinc-300 hover:text-cyan-400 cursor-pointer hover:underline" onClick={() => setActiveTab('frontend')}>frontend</span><span>    </span><span className="text-cyan-400">@soham-peerbot</span><span>   best founding engineer...     </span><span className="text-green-400">✓</span><span>     ∅</span>
+                  <span>{'\n'}  </span><span className="text-zinc-300 hover:text-cyan-400 cursor-pointer hover:underline" onClick={() => setActiveTab('marketing')}>marketing</span><span>   </span><span className="text-cyan-400">@lorena</span><span>          growth hacker...              </span><span className="text-red-400">✗</span><span>     ∅</span>
                 </pre>
                 
                 <motion.div
@@ -149,8 +149,7 @@ export function Terminal() {
               transition={{ duration: 0.3 }}
               className="text-zinc-300"
             >
-              <div className="text-zinc-500"># buremba.md</div>
-              <pre className="mt-3 text-sm text-zinc-300 whitespace-pre-wrap">{`---
+              <pre className="text-sm text-zinc-300 whitespace-pre-wrap">{`---
 user: "@buremba-ai"
 editor: cursor
 allow_execution: true
@@ -167,7 +166,6 @@ You quickly create MVPs and iterate on them.`}</pre>
               transition={{ duration: 0.3 }}
               className="text-zinc-300"
             >
-              <div className="text-zinc-500"># devops.md</div>
               <pre className="mt-3 text-sm text-zinc-300 whitespace-pre-wrap">{`---
 user: "@k8s"
 editor: vscode
@@ -185,16 +183,15 @@ Docker, CI/CD pipelines, and cloud infrastructure.`}</pre>
               transition={{ duration: 0.3 }}
               className="text-zinc-300"
             >
-              <div className="text-zinc-500"># frontend.md</div>
-              <pre className="mt-3 text-sm text-zinc-300 whitespace-pre-wrap">{`---
-user: "@slack-peer-bot"
+              <pre className="text-sm text-zinc-300 whitespace-pre-wrap">{`---
+user: "@soham-peerbot"
 editor: cursor
 allow_execution: true
-role: "senior frontend engineer"
+role: "everybody's favorite frontend engineer"
 ---
 
-You are a senior frontend engineer specializing in
-React, TypeScript, and modern web development.`}</pre>
+Everybody wants to hire you because you don't sleep and work 24/7.
+You're a smart guy who gets the job done in the best possible way given timeline.`}</pre>
             </motion.div>
           ) : activeTab === 'marketing' ? (
             <motion.div
@@ -203,8 +200,7 @@ React, TypeScript, and modern web development.`}</pre>
               transition={{ duration: 0.3 }}
               className="text-zinc-300"
             >
-              <div className="text-zinc-500"># marketing.md</div>
-              <pre className="mt-3 text-sm text-zinc-300 whitespace-pre-wrap">{`---
+              <pre className="text-sm text-zinc-300 whitespace-pre-wrap">{`---
 user: "@lorena"
 editor: vscode
 allow_execution: false

@@ -41,14 +41,12 @@ export function Hero() {
             </h1>
             
             <div className="mb-8 max-w-xl space-y-3">
-              <p className=" text-zinc-300 lg:text-lg">
-                <span className=" text-pink-400">Claude Code</span>, best agentic coding assistant in your messaging app. 
-
+              <p className="text-zinc-300 lg:text-lg">
+                <span className="text-pink-400">Claude Code</span>, the best agentic coding assistant, now in your messaging app.
               </p>
-              <p className=" text-zinc-400 text-md">
-              PeerBot helps you with your everyday tasks using your <span className="text-green-400 font-medium">local environment</span>.
+              <p className="text-zinc-400 text-md">
+                PeerBot helps you tackle everyday tasks using your local environment and team expertise.
               </p>
-             
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -59,7 +57,7 @@ export function Hero() {
                 className="inline-flex items-center gap-2 rounded-full bg-pink-700 px-8 py-2 text-lg font-medium text-white transition-all hover:bg-pink-600 active:ring-4 active:ring-pink-500/50"
               >
                 <SlackIcon className="h-5 w-5" />
-                Join our Slack to experience
+                Try it now
               </a>
               <a
                 href="https://join.slack.com/t/peerbot/shared_invite/zt-391o8tyw2-iyupjTG1xHIz9Og8C7JOnw"
