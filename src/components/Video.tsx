@@ -43,8 +43,29 @@ export function Video() {
                 <div className="w-20" />
               </div>
               
+              <video
+                  playsInline
+                  muted
+                  autoPlay
+                  loop
+                  controls
+                  className="h-full w-full"
+                  width="2476"
+                  height="1534"
+                >
+                  <source 
+                    src="/video.mp4" 
+                    type='video/mp4; codecs="hvc1"'
+                  />
+                  <source 
+                    src="/video.mp4" 
+                    type="video/webm"
+                  />
+                  <track kind="captions" />
+                  Your browser does not support the video tag.
+                </video>
               {/* Screenshot content */}
-              <div className="relative aspect-video">
+              {/* <div className="relative aspect-video">
                 <img
                   src="/images/screenshot.png"
                   alt="PeerBot demo"
@@ -52,7 +73,7 @@ export function Video() {
                   width="2476"
                   height="1534"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </motion.div>
