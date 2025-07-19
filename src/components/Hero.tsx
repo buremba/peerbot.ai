@@ -42,7 +42,7 @@ export function Hero() {
             
             <div className="mb-8 max-w-xl space-y-3">
               <p className="text-zinc-300 lg:text-lg">
-                <span className="text-pink-400">Claude Code</span>, the best agentic coding assistant, now in your messaging app.
+                <span className="text-pink-400">Claude Code</span>, the best agentic coding assistant, is now in your messaging app.
                 <span className="text-zinc-400 text-md ml-1">PeerBot helps you tackle everyday tasks using your local environment and team expertise.</span>
               </p>
             
