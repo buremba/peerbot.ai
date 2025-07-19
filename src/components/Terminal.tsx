@@ -9,7 +9,7 @@ export function Terminal() {
     <motion.div
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, delay: 0.3 }}
+      transition={{ duration: 0.5, delay: 0.3 }}
       className="terminal-window rounded-lg overflow-hidden shadow-2xl w-full max-w-full"
     >
       <div className="bg-zinc-900 border border-zinc-800 w-full">

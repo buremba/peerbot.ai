@@ -38,7 +38,7 @@ export function Installation() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
@@ -47,7 +47,7 @@ export function Installation() {
               Installation
             </h2>
             <span className="inline-block rounded-full bg-pink-500/20 px-3 py-1 text-sm font-medium text-pink-400 border border-pink-500/30">
-              Alpha
+              open-source soon
             </span>
           </div>
           <p className="text-xl text-zinc-400">
