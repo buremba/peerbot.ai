@@ -1,4 +1,4 @@
-name: Deploy Cloudflare Pages Preview
+name: Deploy to Cloudflare Pages Preview
 
 on:
   pull_request:
