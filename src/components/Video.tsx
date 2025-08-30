@@ -54,11 +54,11 @@ export function Video() {
                   height="1534"
                 >
                   <source 
-                    src="/video.mp4" 
+                    src="/peerbot_v01.mp4" 
                     type='video/mp4; codecs="hvc1"'
                   />
                   <source 
-                    src="/video.mp4" 
+                    src="/peerbot_v01.mp4" 
                     type="video/webm"
                   />
                   <track kind="captions" />
