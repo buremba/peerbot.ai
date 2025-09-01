@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
 @import "tailwindcss";
 
+
 :root {
   --panel-bg: rgba(24, 24, 27, 0.9);
   --panel-border: rgb(63, 63, 70);

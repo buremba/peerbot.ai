@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Header } from '../components/Header'
 import { Hero } from '../components/Hero'
+import { PainPoints } from '../components/PainPoints'
 import { Video } from '../components/Video'
 import { Features } from '../components/Features'
 import { Installation } from '../components/Installation'
@@ -22,10 +23,11 @@ function HomePage() {
       />
       <Header />
       <Hero />
+      <PainPoints />
       <Video />
       <Features />
-      <Installation />
       <FAQ />
+      <Installation />
       <Footer />
     </>
   )

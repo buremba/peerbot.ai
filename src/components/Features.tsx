@@ -1,38 +1,4 @@
-import { Shield, Zap, Users, Lock, Globe, Code } from 'lucide-react'
 import { motion } from 'framer-motion'
-
-const features = [
-  {
-    icon: <Zap className="h-6 w-6" />,
-    title: 'Smart GIT worktrees',
-    description: 'When making code changes, PeerBot automatically creates worktrees and pushes them to create Pull Requests—all from Slack.',
-  },
-  {
-    icon: <Shield className="h-6 w-6" />,
-    title: 'Team collaboration made easy',
-    description: 'Your colleagues can ask questions directly to the bot instead of interrupting you. You review and approve before any action is taken.',
-  },
-  {
-    icon: <Users className="h-6 w-6" />,
-    title: 'Smart model selection',
-    description: 'Define multiple peers, each with their own role and model. The right peer is automatically selected based on conversation context.',
-  },
-  {
-    icon: <Lock className="h-6 w-6" />,
-    title: 'Secure by design',
-    description: 'Uses Slack Bolt SDK in socket mode with end-to-end encryption between your Slack workspace and local environment.',
-  },
-  {
-    icon: <Globe className="h-6 w-6" />,
-    title: 'Access from anywhere',
-    description: 'Work with your AI peers from desktop, mobile, or web—wherever Slack is available.',
-  },
-  {
-    icon: <Code className="h-6 w-6" />,
-    title: 'Deploy anywhere',
-    description: 'Simple CLI installation works on your local machine, CI/CD pipelines, or cloud providers like AWS, GCP, and Azure.',
-  },
-]
 
 export function Features() {
   return (
@@ -46,35 +12,60 @@ export function Features() {
           className="text-center"
         >
           <h2 className="mb-4 text-4xl font-bold text-zinc-100">
-            Built for developers, by developers
+            Validate Ideas in a Trusted Production Environment
           </h2>
           <p className="mb-16 text-xl text-zinc-400">
-            PeerBot brings the power of Claude Code to your Slack workspace.
+            No tickets. No sprints. No waiting.
           </p>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => (
+        <div className="mb-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              number: "1",
+              title: "Install to Slack",
+              description: "One-click installation. Peerbot connects securely to your codebase with read/write permissions you control."
+            },
+            {
+              number: "2", 
+              title: "Chat Your Changes",
+              description: "Just @mention Peerbot and describe what you want. \"Update the pricing page header\" or \"Change button color to match brand.\""
+            },
+            {
+              number: "3",
+              title: "Review & Deploy", 
+              description: "Peerbot shows you a preview, creates a review for dev team, and can auto-deploy to staging or production based on your rules."
+            },
+            {
+              number: "4",
+              title: "Track Everything",
+              description: "Full audit trail, rollback capability, and integration with your existing CI/CD pipeline. Stay in control."
+            }
+          ].map((step, index) => (
             <motion.div
-              key={feature.title}
+              key={step.number}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="feature-block"
+              className="text-center relative"
             >
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 text-zinc-400">
-                {feature.icon}
+              <div className="mb-4 mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-pink-600 to-pink-700 text-white font-bold text-lg">
+                {step.number}
               </div>
-              <h3 className="mb-2 text-lg font-semibold text-zinc-100">
-                {feature.title}
+              <h3 className="mb-3 text-lg font-semibold text-zinc-100">
+                {step.title}
               </h3>
-              <p className="text-zinc-400">
-                {feature.description}
+              <p className="text-zinc-400 text-sm leading-relaxed">
+                {step.description}
               </p>
+              {index < 3 && (
+                <div className="hidden lg:block absolute top-6 left-full w-full h-0.5 bg-gradient-to-r from-pink-600 to-transparent" />
+              )}
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   )

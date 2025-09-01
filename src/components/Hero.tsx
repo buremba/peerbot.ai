@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { MessageSquare } from 'lucide-react'
-import { Terminal } from './Terminal'
+import { SlackConversation } from './SlackConversation'
 
 // Slack Logo SVG Component
 function SlackIcon({ className }: { className?: string }) {
@@ -33,17 +33,15 @@ export function Hero() {
             className="relative z-10"
           >
             <h1 className="mb-6 text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-              <span className="gradient-title">Build AI peers</span>
+              <span className="gradient-title">Ship Features</span>
               <br />
-              <span className="text-zinc-400 text-md">to work for you</span>
+              <span className="text-zinc-400 text-md">Without Waiting for Dev</span>
               <br />
-              <span>on Slack</span>
             </h1>
             
             <div className="mb-8 max-w-xl space-y-3">
               <p className="text-zinc-300 lg:text-lg">
-                <span className="text-pink-400">Claude Code</span>, the best agentic coding assistant, is now in your messaging app.
-                <span className="text-zinc-400 text-md ml-1">PeerBot helps you tackle everyday tasks using your local environment and team expertise.</span>
+                <span className="text-pink-400">Empower </span>PMs, marketers, and sales teams to modify production code through simple Slack conversations. No coding required. No dev timeline disruption.
               </p>
             
             </div>
@@ -72,9 +70,9 @@ export function Hero() {
             </div>
           </motion.div>
           
-          {/* Terminal on the right */}
+          {/* Slack Conversation on the right */}
           <div className="relative lg:pl-8 w-full max-w-full overflow-hidden">
-            <Terminal />
+            <SlackConversation />
           </div>
         </div>
       </div>
