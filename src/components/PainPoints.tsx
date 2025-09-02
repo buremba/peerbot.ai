@@ -9,7 +9,7 @@ const painPoints = [
   {
     icon: "☁️", 
     title: "Runs on your infrastructure",
-    description: "Peerbot runs on your cloud infrastructure with Kubernetes (or Docker for local development) so your code is never exposed to anybody but the agent."
+    description: "Peerbot runs on your cloud infrastructure with Kubernetes (or Docker) so your code is never exposed to anybody but the agent."
   },
   {
     icon: "💸",
