@@ -35,13 +35,13 @@ export function Hero() {
             <h1 className="mb-6 text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
               <span className="gradient-title">Ship Features</span>
               <br />
-              <span className="text-zinc-400 text-md">Without Waiting for Dev</span>
+              <span className="text-zinc-400 text-md">Without Waiting</span>
               <br />
             </h1>
             
             <div className="mb-8 max-w-xl space-y-3">
               <p className="text-zinc-300 lg:text-lg">
-                <span className="text-pink-400">Empowers </span>PMs, marketers, and sales teams to validate ideas in a secure testing environment that mirrors production — directly from Slack. No coding required. No dev timeline disruption.
+                <span className="text-pink-400">Empowers </span>product managers, marketers, and sales teams to validate ideas and develop them with an agent — directly from Slack.
               </p>
             
             </div>

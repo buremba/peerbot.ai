@@ -38,7 +38,7 @@ export function PainPoints() {
             The Hidden Cost of Development Bottlenecks
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-            Every day your team waits for simple changes costs you customers, revenue, and competitive advantage
+            Peerbot is a Slack bot that helps you experiment features and validate ideas in a secure testing environment that mirrors production.
           </p>
         </motion.div>
 
