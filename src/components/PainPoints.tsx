@@ -3,22 +3,22 @@ import { motion } from 'framer-motion'
 const painPoints = [
   {
     icon: "⏱️",
-    title: "6-Week Sprint Cycles for Simple Changes",
+    title: "Ship faster without breaking",
     description: "That urgent copy update for your campaign? It's sitting in the backlog behind 47 other tickets. Your competitors just launched while you're still waiting."
   },
   {
-    icon: "🔄", 
+    icon: "☁️", 
     title: "Runs on your infrastructure",
     description: "Peerbot runs on your cloud infrastructure with Kubernetes (or Docker for local development) so your code is never exposed to anybody but the agent."
   },
   {
     icon: "💸",
-    title: "$200k+ Dev Time on Non-Dev Tasks", 
-    description: "Your senior engineers spending hours on button color changes and copy updates. That's $100/hour talent doing $10/hour work."
+    title: "Save engineer time", 
+    description: "Your senior engineers spending countless hours on button color changes and copy updates. That's $100/hour talent doing $10/hour work."
   },
   {
     icon: "🔮",
-    title: "Best-in-class agents",
+    title: "Use best-in-class agents",
     description: "Peerbot uses Claude Code from Anthropic, the best agentic coding assistant, to create features and validate ideas."
   }
 ]
