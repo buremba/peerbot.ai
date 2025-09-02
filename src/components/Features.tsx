@@ -34,7 +34,7 @@ export function Features() {
             {
               number: "3",
               title: "Review & Deploy", 
-              description: "Peerbot shows you a preview, creates a review for dev team, and can auto-deploy to staging or production based on your rules."
+              description: "Peerbot shows you a preview that you can create a pull request to. Your engineers review, refactor if needed, and merge to ship production."
             },
             {
               number: "4",
