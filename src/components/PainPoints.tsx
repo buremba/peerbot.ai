@@ -8,8 +8,8 @@ const painPoints = [
   },
   {
     icon: "🔄", 
-    title: "Lost in Translation",
-    description: "PM writes specs → Designer creates mockups → Dev interprets differently → QA finds issues → Back to square one. Sound familiar?"
+    title: "Runs on your infrastructure",
+    description: "Peerbot runs on your cloud infrastructure with Kubernetes (or Docker for local development) so your code is never exposed to anybody but the agent."
   },
   {
     icon: "💸",
