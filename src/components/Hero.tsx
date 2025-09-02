@@ -41,7 +41,7 @@ export function Hero() {
             
             <div className="mb-8 max-w-xl space-y-3">
               <p className="text-zinc-300 lg:text-lg">
-                <span className="text-pink-400">Empower </span>PMs, marketers, and sales teams to modify production code through simple Slack conversations. No coding required. No dev timeline disruption.
+                <span className="text-pink-400">Empowers </span>PMs, marketers, and sales teams to validate ideas in a secure testing environment that mirrors production — directly from Slack. No coding required. No dev timeline disruption.
               </p>
             
             </div>
