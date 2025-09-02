@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="text-center md:text-left">
-            <p className="text-zinc-400">
+            {/* <p className="text-zinc-400">
               Built with ❤️ by{' '}
               <a
                 href="https://github.com/buremba"
@@ -16,7 +16,7 @@ export function Footer() {
               >
                 buremba
               </a>
-            </p>
+            </p> */}
             <p className="mt-2 text-sm text-zinc-500">
               © 2025 peerbot. All rights reserved.
             </p>
