@@ -38,7 +38,7 @@ export function PainPoints() {
             The Hidden Cost of Development Bottlenecks
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-            Peerbot is a Slack bot that helps you experiment features and validate ideas in a secure testing environment that mirrors production.
+            Peerbot is a Slack bot which runs in a secure sandbox environment, a mirror of your production. You can create preview URLs and create Pull Requests to your codebase.
           </p>
         </motion.div>
 
