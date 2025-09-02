@@ -17,9 +17,9 @@ const painPoints = [
     description: "Your senior engineers spending hours on button color changes and copy updates. That's $100/hour talent doing $10/hour work."
   },
   {
-    icon: "🚫",
-    title: "No-Code Tools Don't Cut It",
-    description: "They promise everything but integrate with nothing. You need something that works with your actual production environment, not a sandbox."
+    icon: "🔮",
+    title: "Best-in-class agents",
+    description: "Peerbot uses Claude Code from Anthropic, the best agentic coding assistant, to create features and validate ideas."
   }
 ]
 
