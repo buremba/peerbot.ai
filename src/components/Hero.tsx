@@ -41,7 +41,7 @@ export function Hero() {
             
             <div className="mb-8 max-w-xl space-y-3">
               <p className="text-zinc-300 lg:text-lg">
-                <span className="text-pink-400">Empowers </span>product managers, marketers, and sales teams to validate ideas and develop them with an agent — directly from Slack.
+                <span className="text-pink-400">Empowers </span>product managers, marketers, and sales teams to validate ideas and develop features with an agent — directly from Slack.
               </p>
             
             </div>

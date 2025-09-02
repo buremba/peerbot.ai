@@ -35,7 +35,7 @@ export function PainPoints() {
           className="text-center mb-16"
         >
           <h2 className="mb-4 text-4xl font-bold text-zinc-100">
-            The Hidden Cost of Development Bottlenecks
+            Scale your team 10x
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
             Peerbot is a Slack bot which runs in a secure sandbox environment, a mirror of your production. You can create preview URLs and create Pull Requests to your codebase.
