@@ -24,7 +24,14 @@ export function SlackConversation() {
           <br />
           <span className="text-green-400">✅ Updated CTA button color to green</span>
           <br />
-          <span className="text-blue-400">🔗 Preview: staging.yoursite.com/preview/234</span>
+          <a
+            href="https://pr-5.peerbot-ai.pages.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 underline"
+          >
+            🔗 Preview: https://pr-5.peerbot-ai.pages.dev/
+          </a>
         </div>
       </div>
     </motion.div>
