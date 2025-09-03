@@ -33,9 +33,9 @@ export function Hero() {
             className="relative z-10"
           >
             <h1 className="mb-6 text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-              <span className="gradient-title">Ship Features</span>
+              <span className="gradient-title">Transform Your Business</span>
               <br />
-              <span className="text-zinc-400 text-md">Without Waiting</span>
+              <span className="text-zinc-400 text-md">with AI</span>
               <br />
             </h1>
             
@@ -51,7 +51,7 @@ export function Hero() {
                               href="https://join.slack.com/t/peerbot/shared_invite/zt-391o8tyw2-iyupjTG1xHIz9Og8C7JOnw"
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-pink-700 px-8 py-2 text-lg font-medium text-white transition-all hover:bg-pink-600 active:ring-4 active:ring-pink-500/50"
+                className="inline-flex items-center gap-2 rounded-full bg-green-700 px-8 py-2 text-lg font-medium text-white transition-all hover:bg-green-600 active:ring-4 active:ring-green-500/50"
               >
                                 <MessageSquare className="h-5 w-5" />
 
