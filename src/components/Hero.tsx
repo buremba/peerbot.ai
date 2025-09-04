@@ -33,9 +33,9 @@ export function Hero() {
             className="relative z-10"
           >
             <h1 className="mb-6 text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-              <span className="gradient-title">Ship Features</span>
+              <span className="gradient-title">Scale your</span>
               <br />
-              <span className="text-zinc-400 text-md">Without Waiting</span>
+              <span className="text-zinc-400 text-md">dev team 10x</span>
               <br />
             </h1>
             
