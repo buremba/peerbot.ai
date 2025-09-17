@@ -47,7 +47,7 @@ export function Installation() {
               Installation
             </h2>
             <span className="inline-block rounded-full bg-pink-500/20 px-3 py-1 text-sm font-medium text-pink-400 border border-pink-500/30">
-              open-source soon
+              soon
             </span>
           </div>
           <p className="text-xl text-zinc-400">
@@ -121,7 +121,7 @@ export function Installation() {
                       'npx peerbot-ai@latest hire public'
                     } />
                   </div>
-                  <p className="text-sm text-zinc-500">Hire temporary bot (valid for 1h) on our public Slack</p>
+                  <p className="text-sm text-zinc-500">Interact with <a href="https://peerbot.slack.com/archives/D097WU1JJUA" target="_blank" rel="noopener noreferrer" className="text-pink-400">@Peerbot</a> on <a href="https://join.slack.com/t/peerbot/shared_invite/zt-391o8tyw2-iyupjTG1xHIz9Og8C7JOnw" target="_blank" rel="noopener noreferrer" className="text-pink-400">our public Slack workspace</a></p>
                 </div>
               </div>
             </div>
@@ -260,7 +260,7 @@ jobs:
       with:
         node-version: '18'
     - name: Run PeerBot
-      run: npx peerbot-ai@latest run slack --peers devops
+      run: npx peerbot-ai@latest run slack 
       env:
         SLACK_BOT_TOKEN: \${{ secrets.SLACK_BOT_TOKEN }}
         SLACK_SIGNING_SECRET: \${{ secrets.SLACK_SIGNING_SECRET }}
@@ -277,7 +277,7 @@ jobs:
       with:
         node-version: '18'
     - name: Run PeerBot
-      run: npx peerbot-ai@latest run slack --peers devops
+      run: npx peerbot-ai@latest run slack 
       env:
         PEERBOT_TOKEN: \${{ secrets.PEERBOT_TOKEN }}`}</code>
                 </pre>
@@ -295,7 +295,7 @@ jobs:
       with:
         node-version: '18'
     - name: Run PeerBot
-      run: npx peerbot-ai@latest run slack --peers devops
+      run: npx peerbot-ai@latest run slack 
       env:
         SLACK_BOT_TOKEN: \${{ secrets.SLACK_BOT_TOKEN }}
         SLACK_SIGNING_SECRET: \${{ secrets.SLACK_SIGNING_SECRET }}
@@ -312,7 +312,7 @@ jobs:
       with:
         node-version: '18'
     - name: Run PeerBot
-      run: npx peerbot-ai@latest run slack --peers devops
+      run: npx peerbot-ai@latest run slack 
       env:
         PEERBOT_TOKEN: \${{ secrets.PEERBOT_TOKEN }}`} />
                 </div>

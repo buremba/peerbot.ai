@@ -182,7 +182,7 @@ function UseCasesPage() {
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                 <a
-                  href="https://slack.com/oauth/v2/authorize?client_id=9171119466245.9176167386695&scope=app_mentions:read,channels:history,chat:write,chat:write.public,im:history,im:read,im:write,users:read,reactions:read,reactions:write,channels:read,groups:read&user_scope="
+                  href="https://slack.com/oauth/v2/authorize?client_id=9171119466245.9283126478193&scope=app_mentions:read,assistant:write,channels:history,channels:read,chat:write,chat:write.public,groups:history,groups:read,im:history,im:read,im:write,mpim:read,reactions:read,reactions:write,users:read,commands&user_scope="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-pink-700 px-8 py-3 text-lg font-medium text-white transition-all hover:bg-pink-600"

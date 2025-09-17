@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 
 function SlackRedirect() {
   useEffect(() => {
-    const slackOAuthUrl = 'https://slack.com/oauth/v2/authorize?client_id=9171119466245.9176167386695&scope=app_mentions:read,channels:history,chat:write,chat:write.public,im:history,im:read,im:write,users:read,reactions:read,reactions:write,channels:read,groups:read&user_scope='
+    const slackOAuthUrl = 'https://slack.com/oauth/v2/authorize?client_id=9171119466245.9283126478193&scope=app_mentions:read,assistant:write,channels:history,channels:read,chat:write,chat:write.public,groups:history,groups:read,im:history,im:read,im:write,mpim:read,reactions:read,reactions:write,users:read,commands&user_scope='
     window.location.href = slackOAuthUrl
   }, [])
 
