@@ -12,10 +12,10 @@ export function Video() {
           className="text-center"
         >
           <h2 className="mb-4 text-4xl font-bold text-zinc-100">
-          A remote agent working for you 24/7
+            A remote agent that works for you 24/7
           </h2>
           <p className="mb-16 text-xl text-zinc-400">
-          Watch how we develop PeerBot <span className="text-pink-400 font-bold">with PeerBot</span> in a Slack workspace, join our Slack to experience.
+            Watch how we develop PeerBot <span className="text-pink-400 font-bold">with PeerBot</span> in a Slack workspace, and join our Slack to experience it for yourself.
           </p>
         </motion.div>
 

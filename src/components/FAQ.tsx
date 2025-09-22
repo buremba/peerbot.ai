@@ -4,20 +4,20 @@ import { useState } from 'react'
 
 const faqs = [
   {
-    question: "Can dev team override or review Peerbot's changes?",
-    answer: "Absolutely! Every change Peerbot can create a pull request in configured Git repository. Developers can review, modify, or reject changes just like any other PR. You can also set up approval workflows requiring dev sign-off for certain types of changes."
+    question: "Can the dev team override or review PeerBot's changes?",
+    answer: "Absolutely! PeerBot can create a pull request for every change in your configured Git repository. Developers can review, modify, or reject updates just like any other PR. You can also set up approval workflows that require developer sign-off for specific types of changes."
   },
   {
-    question: "What happens if Peerbot makes a mistake?",
-    answer: "All changes are reversible. Peerbot maintains a complete audit trail and you can rollback any change instantly. Plus, with staging previews, you'll catch any issues before they reach production. We also have safeguards preventing Peerbot from modifying critical system files or security configurations."
+    question: "What happens if PeerBot makes a mistake?",
+    answer: "All changes are reversible. PeerBot maintains a complete audit trail, and you can roll back any change instantly. Plus, with staging previews, you'll catch any issues before they reach production. We also provide safeguards that prevent PeerBot from modifying critical system files or security configurations."
   },
   {
-    question: "How does Peerbot handle merge conflicts?",
-    answer: "Peerbot intelligently detects potential conflicts before making changes. If a conflict is detected, it notifies you in Slack and can either wait for the conflict to be resolved or create a separate branch for later merging. For simple conflicts, Peerbot can suggest resolutions."
+    question: "How does PeerBot handle merge conflicts?",
+    answer: "PeerBot intelligently detects potential conflicts before making changes. If a conflict appears, it notifies you in Slack and can either wait for the conflict to be resolved or create a separate branch for later merging. For simple conflicts, PeerBot can suggest resolutions."
   },
   {
     question: "Can I create custom AI peers with different capabilities?",
-    answer: "Absolutely! PeerBot allows you to define multiple peers, each with their own role, expertise, and AI model. For example, you can have a 'Senior Developer' peer for complex architecture decisions, a 'QA Engineer' peer for testing, and a 'DevOps' peer for deployment tasks. The right peer is automatically selected based on the conversation context. Roles can be attached to models either in Claude or Ollama (coming soon)."
+    answer: "Absolutely! PeerBot allows you to define multiple peers, each with its own role, expertise, and AI model. For example, you can have a 'Senior Developer' peer for complex architecture decisions, a 'QA Engineer' peer for testing, and a 'DevOps' peer for deployment tasks. The right peer is automatically selected based on the conversation context. Roles can be attached to models in Claude today, with Ollama support coming soon."
   },
 ]
 

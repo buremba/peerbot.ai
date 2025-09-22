@@ -24,17 +24,17 @@ export function Features() {
             {
               number: "1",
               title: "Install to Slack",
-              description: "One-click installation. Peerbot connects securely to your codebase with read/write permissions you control."
+              description: "One-click installation. PeerBot connects securely to your codebase with read/write permissions that you control."
             },
             {
-              number: "2", 
+              number: "2",
               title: "Chat Your Changes",
-              description: "Just @mention Peerbot and describe what you want. \"Update the pricing page header\" or \"Change button color to match brand.\""
+              description: "Just @mention PeerBot and describe what you need — for example, \"Update the pricing page header\" or \"Change the button color to match the brand.\""
             },
             {
               number: "3",
-              title: "Review & Deploy", 
-              description: "Peerbot shows you a preview that you can create a pull request to. Your engineers review, refactor if needed, and merge to ship production."
+              title: "Review & Deploy",
+              description: "PeerBot shows you a preview and can open a pull request for review. Your engineers review, refactor if needed, and merge to ship to production."
             },
             {
               number: "4",
