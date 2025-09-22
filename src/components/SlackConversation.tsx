@@ -18,19 +18,19 @@ export function SlackConversation() {
         </div>
         
         <div className="bg-gradient-to-r from-zinc-800/80 to-zinc-700/80 p-4 rounded-lg border-l-4 border-pink-500">
-          <strong className="text-zinc-200">🤖 Peerbot:</strong> <span className="text-zinc-300">I'll update the homepage for you!</span>
-          <br />
-          <span className="text-green-400">✅ Changed headline to "Transform Your Business with AI"</span>
+          <strong className="text-zinc-200">🤖 </strong> <span className="text-zinc-300">Setting up sandbox environment for <a href="https://github.com/buremba/peerbot.ai" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">buremba/peerbot.ai</a></span>
           <br />
           <span className="text-green-400">✅ Updated CTA button color to green</span>
           <br />
+          <span className="text-green-400">✅ Updated headline to "Transform Your Business with AI"</span>
+          <br />
           🔗 Preview:  
           <a
-            href="https://pr-5.peerbot-ai.pages.dev/"
+            href="https://vibe-code-cta-button.peerbot.ai/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-400 underline ml-2"
-          >https://pr-5.peerbot-ai.pages.dev/
+          >https://vibe-code-cta-button.peerbot.ai/
           </a>
         </div>
       </div>
