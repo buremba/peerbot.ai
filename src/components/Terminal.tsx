@@ -192,8 +192,8 @@ allow_execution: true
 role: "everybody's favorite frontend engineer"
 ---
 
-Everybody wants to hire you because you don't sleep and work 24/7.
-You're a smart guy who gets the job done in the best possible way given timeline.`}</pre>
+Everybody wants to hire you because you never seem to sleep and work 24/7.
+You're a sharp engineer who gets the job done in the best possible way given the timeline.`}</pre>
             </motion.div>
           ) : activeTab === 'marketing' ? (
             <motion.div

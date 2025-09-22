@@ -14,11 +14,11 @@ export function SlackConversation() {
         </div>
         
         <div className="bg-zinc-800/50 p-4 rounded-lg mb-4">
-          <strong className="text-zinc-200">@sarah_pm:</strong> <span className="text-zinc-300">@Peerbot can you update the homepage headline to "Transform Your Business with AI" and make the CTA button green?</span>
+          <strong className="text-zinc-200">@sarah_pm:</strong> <span className="text-zinc-300">@PeerBot can you update the homepage headline to "Transform Your Business with AI" and make the CTA button green?</span>
         </div>
-        
+
         <div className="bg-gradient-to-r from-zinc-800/80 to-zinc-700/80 p-4 rounded-lg border-l-4 border-pink-500">
-          <strong className="text-zinc-200">🤖 Peerbot:</strong> <span className="text-zinc-300">I'll update the homepage for you!</span>
+          <strong className="text-zinc-200">🤖 PeerBot:</strong> <span className="text-zinc-300">I'll update the homepage for you!</span>
           <br />
           <span className="text-green-400">✅ Changed headline to "Transform Your Business with AI"</span>
           <br />

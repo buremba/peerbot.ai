@@ -7,19 +7,19 @@ const painPoints = [
     description: "That urgent copy update for your campaign? It's sitting in the backlog behind 47 other tickets. Your competitors just launched while you're still waiting."
   },
   {
-    icon: "☁️", 
+    icon: "☁️",
     title: "Run on your infrastructure",
-    description: "Peerbot runs on your cloud infrastructure with Kubernetes (or Docker) so your code is never exposed to anybody but the agent."
+    description: "PeerBot runs on your cloud infrastructure with Kubernetes (or Docker), so your code is never exposed to anyone other than the agent."
   },
   {
     icon: "💸",
-    title: "Save engineer time", 
-    description: "Your senior engineers spending countless hours on button color changes and copy updates. That's $100/hour talent doing $10/hour work."
+    title: "Save engineer time",
+    description: "Your senior engineers are spending countless hours on button color changes and copy updates. That's $100/hour talent doing $10/hour work."
   },
   {
     icon: "🔮",
     title: "Use best-in-class agents",
-    description: "Peerbot uses Claude Code from Anthropic, the best agentic coding assistant, to create features and validate ideas."
+    description: "PeerBot uses Claude Code from Anthropic, the leading agentic coding assistant, to create features and validate ideas."
   }
 ]
 
@@ -35,10 +35,10 @@ export function PainPoints() {
           className="text-center mb-16"
         >
           <h2 className="mb-4 text-4xl font-bold text-zinc-100">
-          Ship Features without waiting
+            Ship features without waiting
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-            Peerbot is a Slack bot which runs in a secure sandbox environment, a mirror of your production. You can create preview URLs and create Pull Requests to your codebase.
+            PeerBot is a Slack bot that runs in a secure sandbox environment—a mirror of your production. You can generate preview URLs and open pull requests against your codebase.
           </p>
         </motion.div>
 

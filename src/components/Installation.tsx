@@ -121,7 +121,7 @@ export function Installation() {
                       'npx peerbot-ai@latest hire public'
                     } />
                   </div>
-                  <p className="text-sm text-zinc-500">Interact with <a href="https://peerbot.slack.com/archives/D097WU1JJUA" target="_blank" rel="noopener noreferrer" className="text-pink-400">@Peerbot</a> on <a href="https://join.slack.com/t/peerbot/shared_invite/zt-391o8tyw2-iyupjTG1xHIz9Og8C7JOnw" target="_blank" rel="noopener noreferrer" className="text-pink-400">our public Slack workspace</a></p>
+                  <p className="text-sm text-zinc-500">Interact with <a href="https://peerbot.slack.com/archives/D097WU1JJUA" target="_blank" rel="noopener noreferrer" className="text-pink-400">@PeerBot</a> on <a href="https://join.slack.com/t/peerbot/shared_invite/zt-391o8tyw2-iyupjTG1xHIz9Og8C7JOnw" target="_blank" rel="noopener noreferrer" className="text-pink-400">our public Slack workspace</a></p>
                 </div>
               </div>
             </div>
