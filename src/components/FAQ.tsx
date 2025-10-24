@@ -4,19 +4,19 @@ import { useState } from 'react'
 
 const faqs = [
   {
-    question: "Can dev team override or review Peerbot's changes?",
+    question: "How is it different compared to other agent systems?",
     answer: "Absolutely! Every change Peerbot can create a pull request in configured Git repository. Developers can review, modify, or reject changes just like any other PR. You can also set up approval workflows requiring dev sign-off for certain types of changes."
   },
   {
-    question: "What happens if Peerbot makes a mistake?",
+    question: "How can I make sure Peerbot is secure?",
     answer: "All changes are reversible. Peerbot maintains a complete audit trail and you can rollback any change instantly. Plus, with staging previews, you'll catch any issues before they reach production. We also have safeguards preventing Peerbot from modifying critical system files or security configurations."
   },
   {
-    question: "How does Peerbot handle merge conflicts?",
+    question: "How can I trust the agent not leaking our company data?",
     answer: "Peerbot intelligently detects potential conflicts before making changes. If a conflict is detected, it notifies you in Slack and can either wait for the conflict to be resolved or create a separate branch for later merging. For simple conflicts, Peerbot can suggest resolutions."
   },
   {
-    question: "Can I create custom AI peers with different capabilities?",
+    question: "Do you help developing custom agents?",
     answer: "Absolutely! PeerBot allows you to define multiple peers, each with their own role, expertise, and AI model. For example, you can have a 'Senior Developer' peer for complex architecture decisions, a 'QA Engineer' peer for testing, and a 'DevOps' peer for deployment tasks. The right peer is automatically selected based on the conversation context. Roles can be attached to models either in Claude or Ollama (coming soon)."
   },
 ]
@@ -75,9 +75,6 @@ export function FAQ() {
           <h2 className="mb-4 text-4xl font-bold text-zinc-100">
             Frequently Asked Questions
           </h2>
-          <p className="mb-16 text-xl text-zinc-400">
-            Everything you need to know about PeerBot and Claude Code integration
-          </p>
         </motion.div>
         
         <div className="divide-y divide-zinc-800">

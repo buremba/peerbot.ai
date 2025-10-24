@@ -10,7 +10,7 @@ export function SlackConversation() {
     >
       <div className="bg-zinc-900 rounded-2xl shadow-2xl p-6 border border-zinc-800">
         <div className="flex items-center gap-2 mb-4 pb-4 border-b border-zinc-800">
-          <span className="text-zinc-400">💬 #product-updates</span>
+          <span className="text-zinc-400">💬 #langing-page</span>
         </div>
         
         <div className="bg-zinc-800/50 p-4 rounded-lg mb-4">

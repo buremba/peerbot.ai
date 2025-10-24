@@ -25,7 +25,7 @@ function HomePage() {
       <Hero />
       <PainPoints />
       <Video />
-      <Features />
+      {/* <Features /> */}
       <FAQ />
       <Installation />
       <Footer />

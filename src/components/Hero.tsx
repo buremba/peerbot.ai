@@ -17,9 +17,9 @@ export function Hero() {
   }
 
   return (
-    <section className="relative overflow-hidden px-8 py-12">
+    <section className="relative overflow-hidden px-8 py-12 text-center">
       <div className="mx-auto max-w-7xl">
-        <div className="relative grid lg:grid-cols-2 gap-8 items-center">
+        <div className="relative grid gap-8 items-center">
           {/* Background - exact structure from sshx.io */}
           <div className="absolute -z-10 scale-150 md:left-[180px] md:top-[-200px] md:w-[1000px] md:scale-100">
             <img className="select-none" src="/landing-background.svg" alt="" />
@@ -33,20 +33,17 @@ export function Hero() {
             className="relative z-10"
           >
             <h1 className="mb-6 text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-              <span className="gradient-title">Scale your</span>
-              <br />
-              <span className="text-zinc-400 text-md">dev team 10x</span>
-              <br />
+              <span className="gradient-title">Do work from Slack</span>
             </h1>
             
-            <div className="mb-8 max-w-xl space-y-3">
+            <div className="mb-8 space-y-3 ">
               <p className="text-zinc-300 lg:text-lg">
-                <span className="text-pink-400">Empower </span>product managers, marketers, and sales teams to validate ideas and develop features with an agent — directly from Slack.
+              Create and host your AI agent for Slack—secure, sandboxed, and limited to the tools you choose.
               </p>
             
             </div>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col gap-4 sm:flex-row justify-center">
               <a
                               href="https://join.slack.com/t/peerbot/shared_invite/zt-391o8tyw2-iyupjTG1xHIz9Og8C7JOnw"
                 target="_blank" 
@@ -65,15 +62,12 @@ export function Hero() {
               >
                                 <SlackIcon className="h-5 w-5" />
  
-                Add to your Slack
+                Build custom agent
               </a>
             </div>
           </motion.div>
           
-          {/* Slack Conversation on the right */}
-          <div className="relative lg:pl-8 w-full max-w-full overflow-hidden">
-            <SlackConversation />
-          </div>
+    
         </div>
       </div>
     </section>

@@ -3,29 +3,29 @@ import { motion } from 'framer-motion'
 const painPoints = [
   {
     icon: "⏱️",
-    title: "Ship faster without breaking",
+    title: "One-off and recurring tasks",
     description: "That urgent copy update for your campaign? It's sitting in the backlog behind 47 other tickets. Your competitors just launched while you're still waiting."
   },
   {
     icon: "☁️", 
-    title: "Run on your infrastructure",
-    description: "Peerbot runs on your cloud infrastructure with Kubernetes (or Docker) so your code is never exposed to anybody but the agent."
+    title: "On your infrastructure",
+    description: "You can run Peerbot locally or in your own cloud instances using Docker + gVisor for secure sandboxing."
   },
   {
-    icon: "💸",
-    title: "Save engineer time", 
+    icon: "🧩",
+    title: "With any MCP servers", 
     description: "Your senior engineers spending countless hours on button color changes and copy updates. That's $100/hour talent doing $10/hour work."
   },
   {
     icon: "🔮",
-    title: "Use best-in-class agents",
-    description: "Peerbot uses Claude Code from Anthropic, the best agentic coding assistant, to create features and validate ideas."
+    title: "Using best-in-class agents",
+    description: "Peerbot uses Claude Code from Anthropic, the best agentic coding assistant. "
   }
 ]
 
 export function PainPoints() {
   return (
-    <section className="px-8 py-24 bg-zinc-900/50">
+    <section className="p-8">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,12 +34,6 @@ export function PainPoints() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="mb-4 text-4xl font-bold text-zinc-100">
-          Ship Features without waiting
-          </h2>
-          <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-            Peerbot is a Slack bot which runs in a secure sandbox environment, a mirror of your production. You can create preview URLs and create Pull Requests to your codebase.
-          </p>
         </motion.div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
