@@ -14,12 +14,12 @@ const painPoints = [
   {
     icon: "🧩",
     title: "With your MCP servers", 
-    description: "Connect any company data with MCPs so agents can operate on behalf of your users."
+    description: "Connect any company data with MCPs so agents can connect external systems and operate on behalf of your users."
   },
   {
-    icon: "👨‍💻",
-    title: "Handle forms and files",
-    description: "Peerbot can generate Slack forms to collect data, attach images, files and process yours natively."
+    icon: "📎",
+    title: "Handles forms and files",
+    description: "Peerbot can generate Slack forms to collect data, attach images and files, and process your attachments natively."
   }
 ]
 

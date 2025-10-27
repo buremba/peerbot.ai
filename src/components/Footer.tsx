@@ -18,7 +18,7 @@ export function Footer() {
               </a>
             </p> */}
             <p className="mt-2 text-sm text-zinc-500">
-              © 2025 peerbot. All rights reserved.
+              © 2025 Peerbot. All rights reserved.
             </p>
           </div>
           

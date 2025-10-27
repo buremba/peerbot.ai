@@ -5,19 +5,19 @@ import { useState } from 'react'
 const faqs = [
   {
     question: "How is it different compared to other agent systems?",
-    answer: "Peerbot uses Claude Code as the agent, Codex and Gemini support is in progress with Agent Client Protocol. We don't build our own agent system but rather make use of the best in class agents."
+    answer: "Peerbot uses Claude Code as the agent. Codex and Gemini support is in progress with the Agent Client Protocol. We don't build our own agent system but rather make use of the best in class agents."
   },
   {
     question: "How can I make sure Peerbot is secure?",
-    answer: "Agents run in a sandbox environment and they can only take actions based on your agent definitions. You only whitelist the actions you want agents to perform."
+    answer: "Agents run in a sandbox environment, and they can only take actions based on your agent definitions. You only whitelist the actions you want agents to perform."
   },
   {
     question: "How can I trust the agent not leaking our company data?",
-    answer: "You can restrict network access, they can only upload data to the Slack threads. Also, you can make Peerbot only available in direct messages so no data leaks in Slack public/private channels."
+    answer: "You can restrict network access; they can only upload data to Slack threads. Also, you can make Peerbot only available in direct messages so no data leaks in Slack public/private channels."
   },
   {
     question: "Do you help developing custom agents?",
-    answer: "Of course! Feel free to schedule a call and we can work with you to offload work to Peerbot to save your team's time."
+    answer: "Of course! Feel free to schedule a call, and we can work with you to offload work to Peerbot to save your team's time."
   },
 ]
 

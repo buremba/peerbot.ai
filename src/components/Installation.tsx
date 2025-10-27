@@ -1,6 +1,6 @@
-import { Copy, Check, Download, File, Folder } from 'lucide-react'
+import { Copy, Check, Download, File as FileIcon, Folder, Terminal } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 interface CopyButtonProps {
   text: string
@@ -31,6 +31,11 @@ function CopyButton({ text }: CopyButtonProps) {
 
 export function Installation() {
   const [selectedFile, setSelectedFile] = useState<'Dockerfile.worker' | 'docker-compose.yml' | '.env' | 'mcp.config.json' | 'README.md'>('README.md')
+
+  const [consoleLogs, setConsoleLogs] = useState<string[]>([])
+  const [isConsoleRunning, setIsConsoleRunning] = useState(false)
+  const consoleEndRef = useRef<HTMLDivElement>(null)
+  const hasStartedConsole = useRef(false)
 
   const fileContents = {
     'Dockerfile.worker': `ARG BASE_VERSION=2.0.0
@@ -242,6 +247,45 @@ The docker-compose.yml defines these services:
 - [GitHub Issues](https://github.com/buremba/peerbot/issues)`
   }
 
+  useEffect(() => {
+    // Prevent multiple executions
+    if (hasStartedConsole.current) return
+    
+    const logs = [
+      "$ docker compose up",
+      "[+] Building 0.1s (10/10) FINISHED",
+      "[+] Running 3/3",
+      "✔ Container redis  Healthy",
+      "✔ Container gateway  Started",
+      "✔ Container worker  Built",
+      "ℹ️  Starting Peerbot services...",
+      "✅ MCP servers initialized",
+      "✅ Docker daemon is connected with gVisor sandbox",
+      "🚀 Peerbot is now running in Socket mode powering your bot"
+    ]
+
+    const delays = [0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500]
+
+    hasStartedConsole.current = true
+    setIsConsoleRunning(true)
+    setConsoleLogs([])
+
+    logs.forEach((log, index) => {
+      setTimeout(() => {
+        setConsoleLogs((prev: string[]) => [...prev, log])
+        if (index === logs.length - 1) {
+          setTimeout(() => setIsConsoleRunning(false), 500)
+        }
+      }, delays[index])
+    })
+  }, [])
+
+  useEffect(() => {
+    if (consoleEndRef.current) {
+      consoleEndRef.current.scrollIntoView({ behavior: "smooth" })
+    }
+  }, [consoleLogs])
+
   return (
     <section id="install" className="p-8">
       <div className="mx-auto max-w-7xl">
@@ -303,9 +347,9 @@ The docker-compose.yml defines these services:
                 <div className="w-16" />
               </div>
 
-              <div className="flex h-[400px]">
+              <div className="flex h-[450px]">
                 {/* Sidebar */}
-                <div className="w-48 bg-zinc-900 border-r border-zinc-700 p-3">
+                <div className="w-48 bg-zinc-900 border-r border-zinc-700 p-3 flex-shrink-0">
                   <div className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3">
                     Explorer
                   </div>
@@ -325,7 +369,7 @@ The docker-compose.yml defines these services:
                               : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800'
                           }`}
                         >
-                          <File className="w-3 h-3" />
+                          <FileIcon className="w-3 h-3" />
                           {fileName}
                         </button>
                       ))}
@@ -333,28 +377,83 @@ The docker-compose.yml defines these services:
                   </div>
                 </div>
 
-                {/* Editor */}
-                <div className="flex-1 bg-zinc-950 flex flex-col">
-                  {selectedFile ? (
-                    <>
-                      {/* Tab */}
-                      <div className="bg-zinc-900 border-b border-zinc-700 px-4 py-2 flex items-center gap-2">
-                        <File className="w-3 h-3 text-zinc-400" />
-                        <span className="text-sm text-zinc-200">{selectedFile}</span>
+                {/* Main content area - editor with terminal at bottom */}
+                <div className="flex-1 bg-zinc-950 flex flex-col overflow-hidden">
+                  {/* Editor */}
+                  <div className="flex-1 flex flex-col min-h-0">
+                    {selectedFile ? (
+                      <>
+                        {/* Tab */}
+                        <div className="bg-zinc-900 border-b border-zinc-700 px-4 py-2 flex items-center gap-2 flex-shrink-0">
+                          <FileIcon className="w-3 h-3 text-zinc-400" />
+                          <span className="text-sm text-zinc-200">{selectedFile}</span>
+                        </div>
+                        
+                        {/* Content */}
+                        <div className="flex-1 p-4 overflow-y-scroll overflow-x-hidden min-h-0 max-h-full">
+                          <pre className="text-sm text-zinc-300 font-mono whitespace-pre-wrap">
+                            {fileContents[selectedFile as keyof typeof fileContents]}
+                          </pre>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="flex-1 flex items-center justify-center text-zinc-500 text-sm">
+                        Select a file to view its contents
                       </div>
-                      
-                      {/* Content */}
-                      <div className="flex-1 p-4 overflow-auto">
-                        <pre className="text-sm text-zinc-300 font-mono whitespace-pre-wrap">
-                          {fileContents[selectedFile as keyof typeof fileContents]}
-                        </pre>
+                    )}
+                  </div>
+
+                  {/* Console/Terminal at bottom */}
+                  <div className="h-36 bg-black/95 border-t border-zinc-700 flex flex-col flex-shrink-0">
+                    {/* Console Header */}
+                    <div className="bg-zinc-900 border-b border-zinc-700 px-4 py-1.5 flex items-center justify-between">
+                     
+                      <div className="flex items-center gap-1 text-xs text-zinc-400 font-mono">
+                        <Terminal className="w-3 h-3" />
+                        $ docker compose up
                       </div>
-                    </>
-                  ) : (
-                    <div className="flex-1 flex items-center justify-center text-zinc-500 text-sm">
-                      Select a file to view its contents
+                      <div className="w-16" />
                     </div>
-                  )}
+
+                    {/* Console Content */}
+                    <div className="flex-1 p-3 overflow-auto">
+                      <div className="space-y-0.5">
+                        {consoleLogs.length === 0 ? (
+                          <div className="text-zinc-500 text-xs font-mono animate-pulse">
+                            $ docker compose up
+                          </div>
+                        ) : (
+                          consoleLogs.map((log, index) => (
+                            <div
+                              key={index}
+                              className="text-xs font-mono text-zinc-300 animate-fade-in"
+                              style={{ animationDelay: `${index * 0.05}s` }}
+                            >
+                              {log.startsWith("$") ? (
+                                <span className="text-green-400">{log}</span>
+                              ) : log.includes("✔") ? (
+                                <span className="text-green-300">{log}</span>
+                              ) : log.includes("✅") ? (
+                                <span className="text-green-400">{log}</span>
+                              ) : log.includes("🚀") ? (
+                                <span className="text-yellow-400 font-semibold">{log}</span>
+                              ) : log.includes("ℹ️") ? (
+                                <span className="text-blue-400">{log}</span>
+                              ) : (
+                                <span>{log}</span>
+                              )}
+                            </div>
+                          ))
+                        )}
+                        {isConsoleRunning && (
+                          <div className="text-xs font-mono text-green-400 animate-pulse">
+                            █
+                          </div>
+                        )}
+                      </div>
+                      <div ref={consoleEndRef} />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
