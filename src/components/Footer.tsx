@@ -23,14 +23,14 @@ export function Footer() {
           </div>
           
           <div className="flex items-center gap-6">
-            <a
+            {/* <a
               href="https://github.com/buremba/peerbot"
               target="_blank"
               rel="noopener noreferrer"
               className="text-zinc-400 transition-colors hover:text-zinc-100"
             >
               <Github className="h-5 w-5" />
-            </a>
+            </a> */}
             <a
               href="https://join.slack.com/t/peerbot/shared_invite/zt-391o8tyw2-iyupjTG1xHIz9Og8C7JOnw"
               target="_blank"

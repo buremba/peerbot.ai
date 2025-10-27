@@ -34,8 +34,10 @@ export function Installation() {
 
   const [consoleLogs, setConsoleLogs] = useState<string[]>([])
   const [isConsoleRunning, setIsConsoleRunning] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
   const consoleEndRef = useRef<HTMLDivElement>(null)
   const hasStartedConsole = useRef(false)
+  const sectionRef = useRef<HTMLDivElement>(null)
 
   const fileContents = {
     'Dockerfile.worker': `ARG BASE_VERSION=2.0.0
@@ -247,10 +249,28 @@ The docker-compose.yml defines these services:
 - [GitHub Issues](https://github.com/buremba/peerbot/issues)`
   }
 
+  // Intersection Observer to detect when section is visible
   useEffect(() => {
-    // Prevent multiple executions
-    if (hasStartedConsole.current) return
-    
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasStartedConsole.current) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.3 } // Trigger when 30% of the section is visible
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    // Only start animation when visible and not already started
+    if (!isVisible || hasStartedConsole.current) return
+
     const logs = [
       "$ docker compose up",
       "[+] Building 0.1s (10/10) FINISHED",
@@ -278,16 +298,18 @@ The docker-compose.yml defines these services:
         }
       }, delays[index])
     })
-  }, [])
+  }, [isVisible])
 
+  // Scroll within console container only - using scrollTop instead of scrollIntoView to avoid page scroll
   useEffect(() => {
-    if (consoleEndRef.current) {
-      consoleEndRef.current.scrollIntoView({ behavior: "smooth" })
+    const consoleContainer = consoleEndRef.current?.parentElement
+    if (consoleContainer && consoleEndRef.current) {
+      consoleContainer.scrollTop = consoleContainer.scrollHeight
     }
   }, [consoleLogs])
 
   return (
-    <section id="install" className="p-8">
+    <section id="install" className="p-8" ref={sectionRef}>
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,6 +1,8 @@
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { CalendarIcon, CodeIcon, MessageSquare, PhoneIcon, PiIcon } from 'lucide-react'
 import { SlackConversation } from './SlackConversation'
+import { useState, useEffect } from 'react'
+
 
 // Slack Logo SVG Component
 function SlackIcon({ className }: { className?: string }) {
@@ -16,6 +18,17 @@ export function Hero() {
     document.getElementById('install')?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const [currentTextIndex, setCurrentTextIndex] = useState(0)
+  const texts = ['Do work from Slack', 'Claude Code in your Slack']
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prev) => (prev + 1) % texts.length)
+    }, 4000) // Switch every 4 seconds
+
+    return () => clearInterval(interval)
+  }, [texts.length])
+
   return (
     <section className="relative overflow-hidden px-8 py-12 text-center">
       <div className="mx-auto max-w-7xl">
@@ -24,16 +37,29 @@ export function Hero() {
           <div className="absolute -z-10 scale-150 md:left-[180px] md:top-[-200px] md:w-[1000px] md:scale-100">
             <img className="select-none" src="/landing-background.svg" alt="" />
           </div>
-          
+
           {/* Text content - left side */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="relative z-10"
           >
             <h1 className="mb-6 text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-              <span className="gradient-title">Do work from Slack</span>
+              <div className="relative min-h-[1.2em]">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={currentTextIndex}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.5 }}
+                    className="gradient-title absolute inset-0 flex items-center justify-center"
+                  >
+                    {texts[currentTextIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </div>
             </h1>
             
             <div className="mb-8 space-y-3 ">
