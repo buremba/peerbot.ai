@@ -15,7 +15,7 @@ export function Video() {
           A remote agent working for you 24/7
           </h2>
           <p className="mb-16 text-xl text-zinc-400">
-          Watch how we develop PeerBot <span className="text-pink-400 font-bold">with PeerBot</span> in a Slack workspace, join our Slack to experience.
+          Build custom agents that has access to company data, have human in the loop to perform actions.
           </p>
         </motion.div>
 

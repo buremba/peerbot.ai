@@ -4,22 +4,22 @@ const painPoints = [
   {
     icon: "⏱️",
     title: "One-off and recurring tasks",
-    description: "That urgent copy update for your campaign? It's sitting in the backlog behind 47 other tickets. Your competitors just launched while you're still waiting."
+    description: "Peerbot answers you on demand or runs on schedule to perform repetitive tasks on Slack channels."
   },
   {
     icon: "☁️", 
     title: "On your infrastructure",
-    description: "You can run Peerbot locally or in your own cloud instances using Docker + gVisor for secure sandboxing."
+    description: "Build custom Docker images with your CLIs and deploy Peerbot to your servers with Docker Compose."
   },
   {
     icon: "🧩",
-    title: "With any MCP servers", 
-    description: "Your senior engineers spending countless hours on button color changes and copy updates. That's $100/hour talent doing $10/hour work."
+    title: "With your MCP servers", 
+    description: "Connect any company data with MCPs so agents can operate on behalf of your users."
   },
   {
-    icon: "🔮",
-    title: "Using best-in-class agents",
-    description: "Peerbot uses Claude Code from Anthropic, the best agentic coding assistant. "
+    icon: "👨‍💻",
+    title: "Handle forms and files",
+    description: "Peerbot can generate Slack forms to collect data, attach images, files and process yours natively."
   }
 ]
 

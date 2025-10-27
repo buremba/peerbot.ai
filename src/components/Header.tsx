@@ -22,12 +22,12 @@ export function Header() {
             >
               Docs
             </Link> */}
-            <Link
+            {/* <Link
               to="/use-cases"
               className="text-zinc-400 transition-colors hover:text-zinc-100"
             >
               Use Cases
-            </Link>
+            </Link> */}
             {/* <Link
               to="/blog"
               className="text-zinc-400 transition-colors hover:text-zinc-100"
@@ -37,14 +37,14 @@ export function Header() {
             <span className="inline-block rounded-full bg-pink-500/20 px-3 py-1 text-sm font-medium text-pink-400 border border-pink-500/30">
               Alpha
             </span>
-            <a
+            {/* <a
               href="https://github.com/buremba/peerbot"
               target="_blank"
               rel="noopener noreferrer"
               className="text-zinc-400 transition-colors hover:text-zinc-100 cursor-pointer" 
             >
               <Github className="h-6 w-6" />
-            </a>
+            </a> */}
           </nav>
           
         </div>

@@ -17,7 +17,7 @@ function HomePage() {
   return (
     <>
       <SEO
-        title="Scale your development team 10x with Enterprise Vibe Coding Assistant"
+        title="Build custom agents on Slack with Peerbot"
         description="Hire AI peers that work alongside your team on Slack. Empower your product managers, marketers, and sales teams to validate ideas and develop features with an agent — directly from Slack."
         keywords="Claude Code Slack integration, AI coding assistant Slack, Slack bot for product managers, AI peer programming"
       />
@@ -26,8 +26,8 @@ function HomePage() {
       <PainPoints />
       <Video />
       {/* <Features /> */}
-      <FAQ />
       <Installation />
+      <FAQ />
       <Footer />
     </>
   )

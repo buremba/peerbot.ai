@@ -1,23 +1,23 @@
 import { motion } from 'framer-motion'
-import { ChevronDown } from 'lucide-react'
+import { CalendarIcon, ChevronDown } from 'lucide-react'
 import { useState } from 'react'
 
 const faqs = [
   {
     question: "How is it different compared to other agent systems?",
-    answer: "Absolutely! Every change Peerbot can create a pull request in configured Git repository. Developers can review, modify, or reject changes just like any other PR. You can also set up approval workflows requiring dev sign-off for certain types of changes."
+    answer: "Peerbot uses Claude Code as the agent, Codex and Gemini support is in progress with Agent Client Protocol. We don't build our own agent system but rather make use of the best in class agents."
   },
   {
     question: "How can I make sure Peerbot is secure?",
-    answer: "All changes are reversible. Peerbot maintains a complete audit trail and you can rollback any change instantly. Plus, with staging previews, you'll catch any issues before they reach production. We also have safeguards preventing Peerbot from modifying critical system files or security configurations."
+    answer: "Agents run in a sandbox environment and they can only take actions based on your agent definitions. You only whitelist the actions you want agents to perform."
   },
   {
     question: "How can I trust the agent not leaking our company data?",
-    answer: "Peerbot intelligently detects potential conflicts before making changes. If a conflict is detected, it notifies you in Slack and can either wait for the conflict to be resolved or create a separate branch for later merging. For simple conflicts, Peerbot can suggest resolutions."
+    answer: "You can restrict network access, they can only upload data to the Slack threads. Also, you can make Peerbot only available in direct messages so no data leaks in Slack public/private channels."
   },
   {
     question: "Do you help developing custom agents?",
-    answer: "Absolutely! PeerBot allows you to define multiple peers, each with their own role, expertise, and AI model. For example, you can have a 'Senior Developer' peer for complex architecture decisions, a 'QA Engineer' peer for testing, and a 'DevOps' peer for deployment tasks. The right peer is automatically selected based on the conversation context. Roles can be attached to models either in Claude or Ollama (coming soon)."
+    answer: "Of course! Feel free to schedule a call and we can work with you to offload work to Peerbot to save your team's time."
   },
 ]
 
@@ -40,7 +40,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-center justify-between py-6 text-left transition-colors hover:text-pink-400"
+        className="flex w-full items-center justify-between py-6 text-left transition-colors hover:text-pink-400 cursor-pointer"
       >
         <h3 className="pr-8 text-lg font-medium text-zinc-200">{question}</h3>
         <ChevronDown 
@@ -86,6 +86,18 @@ export function FAQ() {
               index={index}
             />
           ))}
+        </div>
+
+        <div className="text-center mt-8">
+          <a
+            href="https://slack.com/oauth/v2/authorize?client_id=9171119466245.9283126478193&scope=app_mentions:read,assistant:write,channels:history,channels:read,chat:write,chat:write.public,groups:history,groups:read,im:history,im:read,im:write,mpim:read,reactions:read,reactions:write,users:read,commands&user_scope="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-zinc-600 bg-zinc-800/50 px-8 py-2 text-lg font-medium text-white transition-all hover:bg-zinc-700/50 hover:border-zinc-500"
+          >
+            <CalendarIcon className="h-5 w-5" />
+            Schedule a call
+          </a>
         </div>
         
         <motion.div
