@@ -15,7 +15,7 @@ export function Video() {
           A remote agent working for you on demand or 24/7
           </h2>
           <p className="mb-16 text-xl text-zinc-400">
-          Build custom agents that have access to company data and have human-in-the-loop to perform actions.
+          Build custom agents that have access to company data and use human-in-the-loop approval to perform actions.
           </p>
         </motion.div>
 

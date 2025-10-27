@@ -64,9 +64,9 @@ export function Hero() {
             
             <div className="mb-8 space-y-3 ">
               <p className="text-zinc-300 lg:text-lg">
-              Create and host your AI agent for Slack; secure, sandboxed, and limited to the tools you choose.
+              Create and host secure, sandboxed AI agents for Slack, limited to the tools you choose.
               </p>
-            
+
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row justify-center">
