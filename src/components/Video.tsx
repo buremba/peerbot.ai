@@ -11,9 +11,6 @@ export function Video() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="mb-4 text-4xl font-bold text-zinc-100">
-          A remote agent working for you on demand or 24/7
-          </h2>
           <p className="mb-16 text-xl text-zinc-400">
           Build custom agents that have access to company data and use human-in-the-loop approval to perform actions.
           </p>
