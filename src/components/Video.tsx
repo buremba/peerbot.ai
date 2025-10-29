@@ -50,13 +50,9 @@ export function Video() {
                   width="2476"
                   height="1534"
                 >
-                  <source 
-                    src="/peerbot_v01.mp4" 
-                    type='video/mp4; codecs="hvc1"'
-                  />
-                  <source 
-                    src="/peerbot_v01.mp4" 
-                    type="video/webm"
+                  <source
+                    src="/peerbot_v01.mp4"
+                    type="video/mp4"
                   />
                   <track kind="captions" />
                   Your browser does not support the video tag.
