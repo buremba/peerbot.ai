@@ -1,0 +1,11 @@
+/*.mp4
+  Accept-Ranges: bytes
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webm
+  Accept-Ranges: bytes
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.mov
+  Accept-Ranges: bytes
+  Cache-Control: public, max-age=31536000, immutable
