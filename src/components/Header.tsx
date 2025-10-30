@@ -9,10 +9,10 @@ export function Header() {
           <Link to="/" className="flex items-center gap-3 text-2xl font-bold">
             <img 
               src="/images/logo.jpg" 
-              alt="PeerBot logo" 
+              alt="Peerbot logo" 
               className="h-10 w-10 rounded-full object-cover"
             />
-            <span className="text-2xl font-bold">PeerBot</span>
+            <span className="text-2xl font-bold">Peerbot</span>
           </Link>
           
           <nav className="flex items-center gap-6">

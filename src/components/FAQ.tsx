@@ -5,7 +5,7 @@ import { useState } from 'react'
 const faqs = [
   {
     question: "How is it different compared to other agent systems?",
-    answer: "Peerbot uses Claude Code as the agent. Codex and Gemini support is in progress with the Agent Client Protocol. We don't build our own agent system but rather make use of the best in class agents."
+    answer: "Peerbot uses Claude Code as the primary agent. Codex and Gemini support is in progress with the Agent Client Protocol. We don't build our own agent system but rather make use of the best in class agents."
   },
   {
     question: "How can I make sure Peerbot is secure?",
@@ -90,7 +90,7 @@ export function FAQ() {
 
         <div className="text-center mt-8">
           <a
-            href="https://slack.com/oauth/v2/authorize?client_id=9171119466245.9283126478193&scope=app_mentions:read,assistant:write,channels:history,channels:read,chat:write,chat:write.public,groups:history,groups:read,im:history,im:read,im:write,mpim:read,reactions:read,reactions:write,users:read,commands&user_scope="
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2ZRJfCBKVLCCMw9ak1z7MIVHaCecqhoDJUcfJyxVueKwb08AEF6bAXPLxFzdWJ0OvAb7BJ0y0N?gv=true"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-zinc-600 bg-zinc-800/50 px-8 py-2 text-lg font-medium text-white transition-all hover:bg-zinc-700/50 hover:border-zinc-500"

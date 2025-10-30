@@ -324,7 +324,7 @@ The docker-compose.yml defines these services:
             </h2>
           </div>
           <p className="text-xl text-zinc-400">
-            Get started with PeerBot in seconds
+            Get started with Peerbot in seconds
           </p>
         </motion.div>
 

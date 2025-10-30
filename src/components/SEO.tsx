@@ -19,13 +19,13 @@ export function SEO({
   image = 'https://peerbot.ai/images/logo.jpg',
   url = 'https://peerbot.ai',
   type = 'website',
-  author = 'PeerBot',
+  author = 'Peerbot',
   publishedTime,
   modifiedTime
 }: SEOProps) {
   useEffect(() => {
     // Update document title
-    document.title = `${title} | PeerBot - AI Coding Assistant for Slack`
+    document.title = `${title} | Peerbot - AI Coding Assistant for Slack`
     
     // Update meta tags
     const updateMetaTag = (property: string, content: string, isProperty = false) => {

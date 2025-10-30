@@ -61,7 +61,7 @@ export function Video() {
               {/* <div className="relative aspect-video">
                 <img
                   src="/images/screenshot.png"
-                  alt="PeerBot demo"
+                  alt="Peerbot demo"
                   className="h-full w-full object-cover"
                   width="2476"
                   height="1534"

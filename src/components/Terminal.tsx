@@ -74,7 +74,7 @@ export function Terminal() {
                 className="mt-2 text-zinc-400"
               >
                 <div className="mt-2"></div>
-                <div className="text-yellow-400">⚡️ PeerBot is running! Peers loaded from <span className="underline cursor-pointer hover:text-yellow-300" onClick={() => setActiveTab('directory')}>.peerbot/peers</span></div>
+                <div className="text-yellow-400">⚡️ Peerbot is running! Peers loaded from <span className="underline cursor-pointer hover:text-yellow-300" onClick={() => setActiveTab('directory')}>.peerbot/peers</span></div>
                 <div className="text-zinc-500">────────────────────────────────────────────────────────────────────────────────</div>
                 <div>Owner: <span className="text-zinc-500">@buremba</span></div>
                 <div>Peers: <span className="text-green-400">4</span></div>

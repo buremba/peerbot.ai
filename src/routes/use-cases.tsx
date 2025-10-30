@@ -20,7 +20,7 @@ const useCases = [
       'Identify potential bugs and security issues',
       'Suggest improvements and best practices',
     ],
-    example: '@PeerBot review PR #123 and suggest improvements',
+    example: '@Peerbot review PR #123 and suggest improvements',
   },
   {
     icon: <Users className="h-8 w-8" />,
@@ -32,7 +32,7 @@ const useCases = [
       'Onboard new team members faster',
       'Share coding patterns and conventions',
     ],
-    example: '@PeerBot how do we handle authentication in our API?',
+    example: '@Peerbot how do we handle authentication in our API?',
   },
   {
     icon: <GitPullRequest className="h-8 w-8" />,
@@ -44,7 +44,7 @@ const useCases = [
       'Write unit tests for existing code',
       'Update dependencies and fix breaking changes',
     ],
-    example: '@PeerBot create unit tests for the UserService class',
+    example: '@Peerbot create unit tests for the UserService class',
   },
   {
     icon: <Bug className="h-8 w-8" />,
@@ -56,7 +56,7 @@ const useCases = [
       'Find similar issues and solutions',
       'Explain complex error scenarios',
     ],
-    example: '@PeerBot help me debug this TypeError in production',
+    example: '@Peerbot help me debug this TypeError in production',
   },
   {
     icon: <Rocket className="h-8 w-8" />,
@@ -68,7 +68,7 @@ const useCases = [
       'Optimize Docker configurations',
       'Create infrastructure as code',
     ],
-    example: '@PeerBot create a GitHub Actions workflow for our Node.js app',
+    example: '@Peerbot create a GitHub Actions workflow for our Node.js app',
   },
   {
     icon: <Shield className="h-8 w-8" />,
@@ -80,7 +80,7 @@ const useCases = [
       'Review dependencies for CVEs',
       'Ensure compliance standards',
     ],
-    example: '@PeerBot scan this code for security vulnerabilities',
+    example: '@Peerbot scan this code for security vulnerabilities',
   },
 ]
 
@@ -134,9 +134,9 @@ function UseCasesPage() {
   return (
     <>
       <SEO
-        title="Use Cases - How Teams Use PeerBot"
-        description="Discover how development teams use PeerBot and Claude Code for code reviews, debugging, team collaboration, DevOps, and more. Real-world examples and benefits."
-        keywords="PeerBot use cases, Claude Code examples, AI coding assistant benefits, Slack bot for developers use cases, team productivity AI"
+        title="Use Cases - How Teams Use Peerbot"
+        description="Discover how development teams use Peerbot and Claude Code for code reviews, debugging, team collaboration, DevOps, and more. Real-world examples and benefits."
+        keywords="Peerbot use cases, Claude Code examples, AI coding assistant benefits, Slack bot for developers use cases, team productivity AI"
         url="https://peerbot.ai/use-cases"
       />
       <Header />
@@ -153,7 +153,7 @@ function UseCasesPage() {
               Use Cases
             </h1>
             <p className="mx-auto max-w-3xl text-xl text-zinc-400">
-              See how teams are using PeerBot to transform their development workflow with AI-powered assistance in Slack
+              See how teams are using Peerbot to transform their development workflow with AI-powered assistance in Slack
             </p>
           </motion.div>
         
@@ -178,7 +178,7 @@ function UseCasesPage() {
                 Ready to Transform Your Workflow?
               </h2>
               <p className="mb-8 text-lg text-zinc-400">
-                Join thousands of developers using PeerBot to build better software faster
+                Join thousands of developers using Peerbot to build better software faster
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                 <a

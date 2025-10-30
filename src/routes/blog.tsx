@@ -13,9 +13,9 @@ export const Route = createFileRoute('/blog')({
 const blogPosts = [
   {
     id: 'introducing-peerbot',
-    title: 'Introducing PeerBot: Claude Code Meets Slack',
-    excerpt: 'Today we\'re excited to announce PeerBot, a revolutionary way to bring AI-powered coding assistance directly into your Slack workspace. Learn how PeerBot transforms team collaboration with intelligent AI peers.',
-    author: 'PeerBot Team',
+    title: 'Introducing Peerbot: Claude Code Meets Slack',
+    excerpt: 'Today we\'re excited to announce Peerbot, a revolutionary way to bring AI-powered coding assistance directly into your Slack workspace. Learn how Peerbot transforms team collaboration with intelligent AI peers.',
+    author: 'Peerbot Team',
     date: '2024-01-15',
     readTime: '5 min read',
     tags: ['announcement', 'claude-code', 'slack-integration'],
@@ -23,8 +23,8 @@ const blogPosts = [
   },
   {
     id: 'git-worktrees-explained',
-    title: 'How PeerBot Uses Git Worktrees for Safe Code Changes',
-    excerpt: 'Discover how PeerBot leverages Git worktrees to make code changes without disrupting your main branch. This innovative approach ensures clean, reviewable pull requests every time.',
+    title: 'How Peerbot Uses Git Worktrees for Safe Code Changes',
+    excerpt: 'Discover how Peerbot leverages Git worktrees to make code changes without disrupting your main branch. This innovative approach ensures clean, reviewable pull requests every time.',
     author: 'Engineering Team',
     date: '2024-01-10',
     readTime: '8 min read',
@@ -33,7 +33,7 @@ const blogPosts = [
   {
     id: 'team-collaboration-ai',
     title: 'The Future of Team Collaboration: AI Peers in Your Workspace',
-    excerpt: 'Explore how AI coding assistants are changing the way development teams collaborate. From code reviews to pair programming, see real examples of teams using PeerBot.',
+    excerpt: 'Explore how AI coding assistants are changing the way development teams collaborate. From code reviews to pair programming, see real examples of teams using Peerbot.',
     author: 'Product Team',
     date: '2024-01-08',
     readTime: '6 min read',
@@ -41,8 +41,8 @@ const blogPosts = [
   },
   {
     id: 'security-first-approach',
-    title: 'Building PeerBot with Security in Mind',
-    excerpt: 'Security is at the core of PeerBot\'s design. Learn about our end-to-end encryption, local-first architecture, and how we keep your code safe while enabling AI assistance.',
+    title: 'Building Peerbot with Security in Mind',
+    excerpt: 'Security is at the core of Peerbot\'s design. Learn about our end-to-end encryption, local-first architecture, and how we keep your code safe while enabling AI assistance.',
     author: 'Security Team',
     date: '2024-01-05',
     readTime: '10 min read',
@@ -51,7 +51,7 @@ const blogPosts = [
   {
     id: 'custom-ai-peers',
     title: 'Creating Custom AI Peers for Your Team\'s Needs',
-    excerpt: 'Learn how to define and configure custom AI peers with specific roles, models, and capabilities. From QA engineers to DevOps specialists, tailor PeerBot to your team.',
+    excerpt: 'Learn how to define and configure custom AI peers with specific roles, models, and capabilities. From QA engineers to DevOps specialists, tailor Peerbot to your team.',
     author: 'Engineering Team',
     date: '2023-12-28',
     readTime: '7 min read',
@@ -135,8 +135,8 @@ function BlogPage() {
     <>
       <SEO
         title="Blog - AI Coding Assistant Insights"
-        description="Stay updated with the latest news, tutorials, and insights about PeerBot and Claude Code integration. Learn best practices for AI-powered development in Slack."
-        keywords="PeerBot blog, Claude Code tutorials, AI coding assistant news, Slack bot development, team collaboration AI"
+        description="Stay updated with the latest news, tutorials, and insights about Peerbot and Claude Code integration. Learn best practices for AI-powered development in Slack."
+        keywords="Peerbot blog, Claude Code tutorials, AI coding assistant news, Slack bot development, team collaboration AI"
         url="https://peerbot.ai/blog"
       />
       <Header />
@@ -153,7 +153,7 @@ function BlogPage() {
               Blog & Updates
             </h1>
             <p className="mx-auto max-w-2xl text-xl text-zinc-400">
-              Insights, tutorials, and updates from the PeerBot team about AI-powered development and team collaboration
+              Insights, tutorials, and updates from the Peerbot team about AI-powered development and team collaboration
             </p>
           </motion.div>
           
@@ -169,7 +169,7 @@ function BlogPage() {
                 Stay in the loop
               </h3>
               <p className="mb-6 text-zinc-400">
-                Get the latest updates about PeerBot and AI coding assistants
+                Get the latest updates about Peerbot and AI coding assistants
               </p>
               <form className="flex gap-4">
                 <input
