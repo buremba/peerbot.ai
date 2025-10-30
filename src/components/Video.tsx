@@ -51,7 +51,7 @@ export function Video() {
                   height="1534"
                 >
                   <source
-                    src="/peerbot_v01.mp4"
+                    src="/peerbot_v02.mp4"
                     type="video/mp4"
                   />
                   <track kind="captions" />
