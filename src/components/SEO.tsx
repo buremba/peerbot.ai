@@ -16,7 +16,7 @@ export function SEO({
   title,
   description,
   keywords,
-  image = 'https://peerbot.ai/images/screenshot/light.jpg',
+  image = 'https://peerbot.ai/images/screenshot/light.png',
   url = 'https://peerbot.ai',
   type = 'website',
   author = 'Peerbot',
