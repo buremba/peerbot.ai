@@ -19,7 +19,10 @@ export function Hero() {
   }
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
-  const texts = ['Do work from Slack', 'Claude Code in your Slack', 'Codex in your Slack', 'Gemini in your Slack']
+  const texts = ['Do work from Slack', 
+    // 'Claude Code in your Slack', 'Codex in your Slack', 'Gemini in your Slack'
+
+  ]
 
   useEffect(() => {
     const interval = setInterval(() => {
