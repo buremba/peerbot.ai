@@ -7,9 +7,9 @@ export function Header() {
       <div className="mx-auto max-w-7xl">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3 text-2xl font-bold">
-            <img 
-              src="/images/screenshot/light.png" 
-              alt="Peerbot logo" 
+            <img
+              src="/images/icons/logo-80.png"
+              alt="Peerbot logo"
               className="h-10 w-10 rounded-full object-cover"
             />
             <span className="text-2xl font-bold">Peerbot</span>
